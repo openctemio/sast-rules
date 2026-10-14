@@ -26,7 +26,6 @@ Each tag `v<major>.<minor>.<patch>` publishes:
 | `sast-rules-<v>.tar.gz` | `rules/` (rule files only, no fixtures), `LICENSE`, `NOTICE`, `LICENSES/`, `VERSION`. Reproducible: sorted, mtime 0, uid/gid 0 |
 | `.sha256` | its SHA-256 |
 | `.sigstore.json` | cosign bundle: certificate, signature and transparency-log proof |
-| `.sig`, `.pem` | the signature and certificate, separately |
 
 Verify:
 
