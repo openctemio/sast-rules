@@ -17,6 +17,16 @@ opengrep scan --config rules/ --no-rewrite-rule-ids <path>
 
 `--no-rewrite-rule-ids` keeps the rule ids as written here. OpenCTEM uses the rule id in a finding's identity.
 
+Add `--dataflow-traces` to get the path from source to sink of taint rules (`mode: taint`). OpenCTEM shows it on the finding.
+
+## In OpenCTEM
+
+- The pack is the default SAST content. Scans on platform-operated sensors run opengrep with this pack and never fetch registry rules. Your own sensors use it unless you set a local rules path or choose registry rule sets.
+- The sensor and the `ci-opengrep` image run it with `--no-rewrite-rule-ids`, `--dataflow-traces` and `--disable-nosem`: an inline ignore comment does not hide a result; OpenCTEM turns it into a pending exception for a person to approve.
+- A finding is keyed on the rule id, the file and the flagged code. Renaming a rule id makes new findings and leaves the triage on the old ones: do not rename a released rule id.
+
+See [Known false positives](https://docs.openctem.io/user-guide/known-false-positives/) and [Data-flow traces](https://docs.openctem.io/scanning/data-flow-traces/).
+
 ## Releases and verification
 
 Each tag `v<major>.<minor>.<patch>` publishes:
