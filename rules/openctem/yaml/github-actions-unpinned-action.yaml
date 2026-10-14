@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.yaml.github-actions.unpinned-action
+  languages: [regex]
+  paths:
+    include: [".github/workflows/*.yml", ".github/workflows/*.yaml", "action.yml", "action.yaml"]
+  severity: WARNING
+  message: >-
+    This action is referenced by a tag or branch, which its owner can move to
+    other code at any time. Pin it to a full commit SHA (and keep the tag in a
+    comment for updates).
+  metadata:
+    category: security
+    cwe: ["CWE-829: Inclusion of Functionality from Untrusted Control Sphere"]
+    owasp: ["A08:2021 - Software and Data Integrity Failures"]
+    confidence: HIGH
+    likelihood: LOW
+    impact: HIGH
+  pattern-regex: (?m)^\s*-?\s*uses:\s*["']?(?!\./|docker://)[\w.-]+/[\w./-]+@(?![0-9a-f]{40}\b)[\w.-]+

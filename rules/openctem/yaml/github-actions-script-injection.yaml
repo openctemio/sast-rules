@@ -1,0 +1,21 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.yaml.github-actions.untrusted-input-in-run
+  languages: [regex]
+  paths:
+    include: [".github/workflows/*.yml", ".github/workflows/*.yaml", "action.yml", "action.yaml"]
+  severity: ERROR
+  message: >-
+    A run step expands text an outsider controls (an issue or pull request
+    title or body, a branch name, a comment). The expansion happens before the
+    shell runs, so the text can inject commands. Pass it through an env
+    variable and quote "$VAR" in the script.
+  metadata:
+    category: security
+    cwe: ["CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"]
+    owasp: ["A03:2021 - Injection"]
+    confidence: HIGH
+    likelihood: MEDIUM
+    impact: HIGH
+  pattern-regex: (?m)^\s*(?:-\s*)?run:.*\$\{\{\s*(?:github\.event\.(?:issue|pull_request|comment|review|review_comment|discussion|pages|commits|head_commit|workflow_run)\b[^}]*|github\.head_ref|inputs\.[\w-]+)\s*\}\}

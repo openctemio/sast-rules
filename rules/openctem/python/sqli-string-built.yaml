@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.python.sqli.string-built-query
+  languages: [python]
+  severity: ERROR
+  message: >-
+    An SQL statement is built by concatenating or formatting values into the
+    query text, and then run. Values that come from users can change the
+    statement (SQL injection). Pass them as query parameters instead.
+  metadata:
+    category: security
+    cwe: ["CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"]
+    owasp: ["A03:2021 - Injection"]
+    confidence: MEDIUM
+    likelihood: HIGH
+    impact: HIGH
+  pattern-either:
+  - patterns:
+    - pattern-either:
+      - pattern: $Q = "$S" + $X + ...
+      - pattern: $Q = "$S" % $X
+      - pattern: $Q = "$S".format(...)
+      - pattern: $Q = f"$S"
+    - metavariable-regex:
+        metavariable: $S
+        regex: (?is)\s*(select\s.+\sfrom|insert\s+into|update\s+\S+\s+set|delete\s+from).*
+  - patterns:
+    - pattern-either:
+      - pattern: $M.objects.raw($Q, ...)
+      - pattern: $CUR.execute($Q)
+    - pattern-not: $M.objects.raw("...", ...)
+    - pattern-not: $CUR.execute("...")

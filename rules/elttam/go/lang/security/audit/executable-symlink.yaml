@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/elttam/semgrep-rules/blob/244268562cc92d33f54b8a60a187df5520f91b26/rules/go/lang/security/audit/executable-symlink.yaml
+rules:
+  - id: potential-symlink-takeover-with-os.executable
+    message: >-
+      os.Executable()s behaviour varies between operating systems.
+      On Linux symlinks are followed, while on MacOS and Windows they are not.
+      Depending on context, this could lead to file replacement attacks and local privilege escalation.
+    metadata:
+      category: security
+      subcategory: audit
+      likelihood: LOW
+      impact: LOW
+      confidence: LOW
+      technology:
+        - golang
+    severity: WARNING
+    languages: [go]
+    patterns:
+      - pattern: |
+          $BIN, ... := os.Executable()
+      - pattern-not-inside: |
+          $BIN, ... := os.Executable()
+          ...
+          ..., ... := filepath.EvalSymlinks($BIN)

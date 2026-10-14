@@ -1,0 +1,11 @@
+<!-- ruleid: openctem.html.django.post-form-without-csrf-token -->
+<form method="POST" action="/login">
+  <input name="user">
+</form>
+<!-- ok: openctem.html.django.post-form-without-csrf-token -->
+<form method="post" action="/save">
+  {% csrf_token %}
+  <input name="v">
+</form>
+<!-- ok: openctem.html.django.post-form-without-csrf-token -->
+<form method="get" action="/search"><input name="q"></form>

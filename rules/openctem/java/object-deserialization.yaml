@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.java.deserialization.object-input-stream
+  languages: [java]
+  severity: ERROR
+  message: >-
+    ObjectInputStream.readObject builds whatever classes the stream names, and
+    gadget chains in common libraries turn that into code execution. Never
+    deserialize data from outside; use JSON with a fixed schema, or an
+    ObjectInputFilter allow-list.
+  metadata:
+    category: security
+    cwe: ["CWE-502: Deserialization of Untrusted Data"]
+    owasp: ["A08:2021 - Software and Data Integrity Failures"]
+    confidence: MEDIUM
+    likelihood: MEDIUM
+    impact: HIGH
+  patterns:
+  - pattern: new ObjectInputStream(...)
+  - pattern-not-inside: |
+      $OIS = new ObjectInputStream(...);
+      ...
+      $OIS.setObjectInputFilter(...);

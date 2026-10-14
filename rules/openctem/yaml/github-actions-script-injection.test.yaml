@@ -1,0 +1,5 @@
+steps:
+  # ruleid: openctem.yaml.github-actions.untrusted-input-in-run
+  - run: echo "${{ github.event.pull_request.title }}"
+  # ok: openctem.yaml.github-actions.untrusted-input-in-run
+  - run: echo "$TITLE"

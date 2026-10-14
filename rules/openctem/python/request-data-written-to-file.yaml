@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.python.injection.request-data-written-to-file
+  languages: [python]
+  severity: ERROR
+  message: >-
+    Request data is written to a file. If the file is code, a template or a
+    configuration the application loads, this lets a user change what the
+    server runs. Do not write request data into files the application
+    executes or renders; store it as data.
+  metadata:
+    category: security
+    cwe: ["CWE-73: External Control of File Name or Path", "CWE-94: Improper Control of Generation of Code ('Code Injection')"]
+    owasp: ["A03:2021 - Injection"]
+    confidence: MEDIUM
+    likelihood: MEDIUM
+    impact: HIGH
+  mode: taint
+  pattern-sources:
+  - pattern-either:
+    - pattern: request.POST
+    - pattern: request.GET
+    - pattern: request.FILES
+    - pattern: request.body
+    - pattern: request.form
+    - pattern: request.args
+    - pattern: request.data
+  pattern-sinks:
+  - patterns:
+    - pattern-either:
+      - pattern: $F.write($D)
+      - pattern: $F.writelines($D)
+    - focus-metavariable: $D

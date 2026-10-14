@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.go.web.open-redirect
+  languages: [go]
+  severity: WARNING
+  message: >-
+    The redirect target is not a constant. If it comes from the request, a link
+    on your domain can send users to any site. Redirect to relative paths or to
+    an allow-list of hosts.
+  metadata:
+    category: security
+    cwe: ["CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"]
+    owasp: ["A01:2021 - Broken Access Control"]
+    confidence: LOW
+    likelihood: MEDIUM
+    impact: MEDIUM
+  patterns:
+  - pattern: http.Redirect($W, $R, $U, $CODE)
+  - pattern-not: http.Redirect($W, $R, "...", $CODE)

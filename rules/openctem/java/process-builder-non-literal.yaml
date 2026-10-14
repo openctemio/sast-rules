@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.java.injection.process-non-literal-command
+  languages: [java]
+  severity: WARNING
+  message: >-
+    A process is started with a command that is not a constant. If any part
+    comes from a user, it can run other programs or, through a shell, other
+    commands. Use a fixed program and pass user values as separate, validated
+    arguments; never through "sh -c".
+  metadata:
+    category: security
+    cwe: ["CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"]
+    owasp: ["A03:2021 - Injection"]
+    confidence: LOW
+    likelihood: MEDIUM
+    impact: HIGH
+  patterns:
+  - pattern-either:
+    - pattern: new ProcessBuilder($C)
+    - pattern: Runtime.getRuntime().exec($C, ...)
+  - pattern-not: new ProcessBuilder("...")
+  - pattern-not: Runtime.getRuntime().exec("...", ...)

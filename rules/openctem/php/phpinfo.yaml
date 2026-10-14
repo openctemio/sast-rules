@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.php.exposure.phpinfo
+  languages: [php]
+  severity: WARNING
+  message: >-
+    phpinfo() prints the PHP configuration, loaded modules, environment and
+    paths: details that help an attacker. Remove it from deployed code.
+  metadata:
+    category: security
+    cwe: ["CWE-200: Exposure of Sensitive Information to an Unauthorized Actor"]
+    owasp: ["A05:2021 - Security Misconfiguration"]
+    confidence: HIGH
+    likelihood: MEDIUM
+    impact: LOW
+  pattern: phpinfo(...)

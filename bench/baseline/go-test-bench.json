@@ -1,0 +1,134 @@
+[
+ {
+  "path": ".github/workflows/continuous-integration-workflow.yml",
+  "start": 45,
+  "end": 45,
+  "language": "yaml"
+ },
+ {
+  "path": "Dockerfile",
+  "start": 17,
+  "end": 17,
+  "language": "dockerfile"
+ },
+ {
+  "path": "cmd/chi/app.go",
+  "start": 22,
+  "end": 22,
+  "language": "go"
+ },
+ {
+  "path": "cmd/exercise/exercise.go",
+  "start": 111,
+  "end": 114,
+  "language": "go"
+ },
+ {
+  "path": "cmd/go-swagger/regen/regen.go",
+  "start": 14,
+  "end": 14,
+  "language": "go"
+ },
+ {
+  "path": "cmd/julienschmidt/app.go",
+  "start": 22,
+  "end": 22,
+  "language": "go"
+ },
+ {
+  "path": "cmd/std/app.go",
+  "start": 22,
+  "end": 22,
+  "language": "go"
+ },
+ {
+  "path": "internal/common/sink.go",
+  "start": 76,
+  "end": 79,
+  "language": "go"
+ },
+ {
+  "path": "internal/common/templateFns.go",
+  "start": 66,
+  "end": 66,
+  "language": "go"
+ },
+ {
+  "path": "internal/injection/cmdi/cmd-injection.go",
+  "start": 53,
+  "end": 53,
+  "language": "go"
+ },
+ {
+  "path": "internal/injection/cmdi/cmd-injection.go",
+  "start": 84,
+  "end": 84,
+  "language": "go"
+ },
+ {
+  "path": "internal/injection/sqli/sql-injection.go",
+  "start": 56,
+  "end": 56,
+  "language": "go"
+ },
+ {
+  "path": "pkg/servechi/servechi.go",
+  "start": 59,
+  "end": 59,
+  "language": "go"
+ },
+ {
+  "path": "pkg/servechi/servechi.go",
+  "start": 87,
+  "end": 87,
+  "language": "go"
+ },
+ {
+  "path": "pkg/servechi/servechi.go",
+  "start": 99,
+  "end": 99,
+  "language": "go"
+ },
+ {
+  "path": "pkg/servejschmidt/servejschmidt.go",
+  "start": 60,
+  "end": 60,
+  "language": "go"
+ },
+ {
+  "path": "pkg/servejschmidt/servejschmidt.go",
+  "start": 88,
+  "end": 88,
+  "language": "go"
+ },
+ {
+  "path": "pkg/servestd/servestd.go",
+  "start": 56,
+  "end": 56,
+  "language": "go"
+ },
+ {
+  "path": "pkg/servestd/servestd.go",
+  "start": 83,
+  "end": 83,
+  "language": "go"
+ },
+ {
+  "path": "pkg/servestd/servestd.go",
+  "start": 119,
+  "end": 119,
+  "language": "go"
+ },
+ {
+  "path": "pkg/serveswagger/setup.go",
+  "start": 137,
+  "end": 137,
+  "language": "go"
+ },
+ {
+  "path": "pkg/serveswagger/setup.go",
+  "start": 172,
+  "end": 172,
+  "language": "go"
+ }
+]

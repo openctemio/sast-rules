@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.python.flask.run-all-interfaces
+  languages: [python]
+  severity: WARNING
+  message: >-
+    The development server listens on every network interface (0.0.0.0), so
+    anyone who can reach the host can reach it, and it is not built for that.
+    Bind to 127.0.0.1 and serve production traffic with a WSGI server.
+  metadata:
+    category: security
+    cwe: ["CWE-668: Exposure of Resource to Wrong Sphere"]
+    owasp: ["A05:2021 - Security Misconfiguration"]
+    confidence: HIGH
+    likelihood: LOW
+    impact: MEDIUM
+  pattern-either:
+  - pattern: $APP.run(..., host="0.0.0.0", ...)
+  - pattern: $APP.run("0.0.0.0", ...)

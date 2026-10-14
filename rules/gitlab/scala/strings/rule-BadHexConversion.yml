@@ -1,0 +1,35 @@
+# SPDX-License-Identifier: MIT
+# Source: https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/strings/rule-BadHexConversion.yml
+# yamllint disable
+# License: MIT (c) GitLab Inc.
+# yamllint enable
+---
+rules:
+- id: "scala_strings_rule-BadHexConversion"
+  languages:
+  - "scala"
+  message: |
+    When converting a byte array containing a hash signature to a human readable string, a
+    conversion mistake can be made if the array is read byte by byte.
+  metadata:
+    category: "security"
+    confidence: "HIGH"
+    cwe: "CWE-704"
+    shortDescription: "Incorrect Type Conversion or Cast"
+    security-severity: "Medium"
+  pattern-either:
+  - pattern: |
+      $B_ARR = ($MD: java.security.MessageDigest).digest(...);
+      ...
+      for(...) {
+        ...
+        Integer.toHexString(...);
+      }
+  - pattern: |
+      $B_ARR = ($MD: java.security.MessageDigest).digest(...);
+      ...
+      while(...) {
+        ...
+        Integer.toHexString(...);
+      }
+  severity: "WARNING"

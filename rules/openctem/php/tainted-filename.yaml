@@ -1,0 +1,45 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.php.path.tainted-filename
+  languages: [php]
+  severity: ERROR
+  message: >-
+    Request data decides which file is read, written, included or deleted.
+    A path like ../../etc/passwd reaches files outside the intended folder.
+    Map the request to a fixed list of files, or resolve the path with
+    realpath and check that it stays under the allowed directory.
+  metadata:
+    category: security
+    cwe: ["CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"]
+    owasp: ["A01:2021 - Broken Access Control"]
+    confidence: MEDIUM
+    likelihood: HIGH
+    impact: HIGH
+  mode: taint
+  pattern-sources:
+  - pattern-either:
+    - pattern: $_GET
+    - pattern: $_POST
+    - pattern: $_REQUEST
+    - pattern: $_COOKIE
+  pattern-sanitizers:
+  - pattern-either:
+    - pattern: basename(...)
+    - pattern: intval(...)
+  pattern-sinks:
+  - patterns:
+    - pattern-either:
+      - pattern: file_get_contents($P, ...)
+      - pattern: file_exists($P)
+      - pattern: fopen($P, ...)
+      - pattern: file($P, ...)
+      - pattern: readfile($P, ...)
+      - pattern: unlink($P, ...)
+      - pattern: file_put_contents($P, ...)
+      - pattern: fnmatch($PAT, $P, ...)
+      - pattern: include $P
+      - pattern: include_once $P
+      - pattern: require $P
+      - pattern: require_once $P
+    - focus-metavariable: $P

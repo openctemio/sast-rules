@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.go.web.cookie-missing-httponly
+  languages: [go]
+  severity: WARNING
+  message: >-
+    This cookie does not set HttpOnly: true (and Secure: true), so scripts in
+    the page can read it and it travels over plain HTTP. Set both, and a
+    SameSite mode.
+  metadata:
+    category: security
+    cwe: ["CWE-1004: Sensitive Cookie Without 'HttpOnly' Flag"]
+    owasp: ["A05:2021 - Security Misconfiguration"]
+    confidence: MEDIUM
+    likelihood: LOW
+    impact: MEDIUM
+  patterns:
+  - pattern: http.Cookie{...}
+  - pattern-not: 'http.Cookie{..., HttpOnly: true, ...}'

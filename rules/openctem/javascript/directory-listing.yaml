@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.javascript.express.directory-listing
+  languages: [javascript, typescript]
+  severity: WARNING
+  message: >-
+    serve-index publishes a browsable listing of this directory. Files nobody
+    links to (backups, keys, logs) become easy to find. Serve the files you mean
+    to publish with express.static and no index.
+  metadata:
+    category: security
+    cwe: ["CWE-548: Exposure of Information Through Directory Listing"]
+    owasp: ["A05:2021 - Security Misconfiguration"]
+    confidence: HIGH
+    likelihood: MEDIUM
+    impact: MEDIUM
+  pattern-either:
+  - pattern: $APP.use(..., serveIndex(...), ...)
+  - pattern: $APP.use(..., require('serve-index')(...), ...)

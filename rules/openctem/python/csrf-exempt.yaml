@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.python.django.csrf-exempt
+  languages: [python]
+  severity: WARNING
+  message: >-
+    @csrf_exempt turns off Django's CSRF protection for this view. Another site
+    can then make a logged-in visitor's browser submit requests to it. Keep the
+    protection and send the CSRF token from the client; exempt only endpoints
+    that authenticate without cookies.
+  metadata:
+    category: security
+    cwe: ["CWE-352: Cross-Site Request Forgery (CSRF)"]
+    owasp: ["A01:2021 - Broken Access Control"]
+    confidence: HIGH
+    likelihood: MEDIUM
+    impact: MEDIUM
+  pattern: |
+    @csrf_exempt
+    def $F(...):
+      ...

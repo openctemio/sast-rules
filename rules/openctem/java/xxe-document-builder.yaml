@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.java.xxe.document-builder-external-entities
+  languages: [java]
+  severity: ERROR
+  message: >-
+    This XML parser resolves external entities or allows a DOCTYPE. An XML
+    document from outside can then read local files or reach internal hosts
+    (XXE). Set disallow-doctype-decl to true, or keep external entities off.
+  metadata:
+    category: security
+    cwe: ["CWE-611: Improper Restriction of XML External Entity Reference"]
+    owasp: ["A05:2021 - Security Misconfiguration"]
+    confidence: MEDIUM
+    likelihood: MEDIUM
+    impact: HIGH
+  pattern-either:
+  - pattern: $F.setFeature("http://xml.org/sax/features/external-general-entities", true)
+  - pattern: $F.setFeature("http://xml.org/sax/features/external-parameter-entities", true)
+  - patterns:
+    - pattern: $F.newDocumentBuilder()
+    - pattern-not-inside: |
+        $F.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+        ...
+    - pattern-not-inside: |
+        $F.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+        ...
+        $F.setFeature("http://xml.org/sax/features/external-general-entities", false);
+        ...

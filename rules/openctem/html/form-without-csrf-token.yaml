@@ -1,0 +1,26 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.html.django.post-form-without-csrf-token
+  languages: [generic]
+  paths:
+    include: ["*.html", "*.htm", "*.djhtml"]
+  severity: WARNING
+  message: >-
+    This POST form has no {% csrf_token %}. Behind Django's CSRF middleware the
+    form fails; with the middleware or the view's protection turned off, another
+    site can submit it for a logged-in user. Add {% csrf_token %} inside the form.
+  metadata:
+    category: security
+    cwe: ["CWE-352: Cross-Site Request Forgery (CSRF)"]
+    owasp: ["A01:2021 - Broken Access Control"]
+    confidence: LOW
+    likelihood: MEDIUM
+    impact: MEDIUM
+  patterns:
+  - pattern-inside: <form ... method="$M" ...> ... </form>
+  - pattern-not-inside: <form ...> ... {% csrf_token %} ... </form>
+  - pattern: <form ...>
+  - metavariable-regex:
+      metavariable: $M
+      regex: (?i)post
