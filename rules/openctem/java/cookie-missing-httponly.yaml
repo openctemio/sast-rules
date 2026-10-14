@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.java.web.cookie-missing-httponly
+  languages: [java]
+  severity: WARNING
+  message: >-
+    This cookie is added without setHttpOnly(true) (and setSecure(true)), so
+    scripts in the page can read it and it travels over plain HTTP. Set both
+    before adding it.
+  metadata:
+    category: security
+    cwe: ["CWE-1004: Sensitive Cookie Without 'HttpOnly' Flag"]
+    owasp: ["A05:2021 - Security Misconfiguration"]
+    confidence: MEDIUM
+    likelihood: LOW
+    impact: MEDIUM
+  patterns:
+  - pattern: $RESP.addCookie($C);
+  - pattern-not-inside: |
+      $C.setHttpOnly(true);
+      ...
+      $RESP.addCookie($C);

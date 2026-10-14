@@ -1,0 +1,35 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.python.path.request-data-in-path
+  languages: [python]
+  severity: ERROR
+  message: >-
+    Request data is used as part of a file path. A value like ../../ reaches
+    files outside the intended folder. Map requests to known file names, or
+    resolve the path and check it stays under the base directory.
+  metadata:
+    category: security
+    cwe: ["CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"]
+    owasp: ["A01:2021 - Broken Access Control"]
+    confidence: MEDIUM
+    likelihood: HIGH
+    impact: HIGH
+  mode: taint
+  pattern-sources:
+  - pattern-either:
+    - pattern: request.POST
+    - pattern: request.GET
+    - pattern: request.args
+    - pattern: request.form
+    - pattern: request.COOKIES
+  pattern-sanitizers:
+  - pattern: os.path.basename(...)
+  pattern-sinks:
+  - patterns:
+    - pattern-either:
+      - pattern: open($P, ...)
+      - pattern: os.path.join(..., $P, ...)
+      - pattern: send_file($P, ...)
+      - pattern: os.remove($P)
+    - focus-metavariable: $P

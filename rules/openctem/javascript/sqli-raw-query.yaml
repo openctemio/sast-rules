@@ -1,0 +1,27 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.javascript.sqli.string-built-raw-query
+  languages: [javascript, typescript]
+  severity: ERROR
+  message: >-
+    A raw SQL query is built with a template literal or string concatenation.
+    Values interpolated into it can change the statement (SQL injection). Use
+    bound parameters (replacements or bind with the ORM, ? placeholders with a
+    driver).
+  metadata:
+    category: security
+    cwe: ["CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"]
+    owasp: ["A03:2021 - Injection"]
+    confidence: MEDIUM
+    likelihood: HIGH
+    impact: HIGH
+  patterns:
+  - pattern-either:
+    - pattern: $DB.query(`...${$X}...`, ...)
+    - pattern: $DB.query("$S" + $X + ..., ...)
+    - pattern: $DB.execute(`...${$X}...`, ...)
+    - pattern: $DB.execute("$S" + $X + ..., ...)
+    - pattern: $DB.raw(`...${$X}...`, ...)
+    - pattern: $DB.raw("$S" + $X + ..., ...)
+    - pattern: $DB.$query(`...${$X}...`, ...)

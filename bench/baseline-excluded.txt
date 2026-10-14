@@ -1,0 +1,8 @@
+# Baseline locations that are not vulnerabilities, so the pack is not asked
+# to find them. One per line: <repo> <path> <start-line> <reason>.
+# Every entry needs a reason a reviewer can check against the code.
+DVWA vulnerabilities/bac/source/low.php 22 value is intval()-converted before it is interpolated
+DVWA vulnerabilities/bac/source/low.php 35 value is intval()-converted before it is interpolated
+DVWA vulnerabilities/brute/source/high.php 22 compares a row count with 1, not a secret
+DVWA vulnerabilities/brute/source/low.php 15 compares a row count with 1, not a secret
+DVWA vulnerabilities/brute/source/medium.php 17 compares a row count with 1, not a secret

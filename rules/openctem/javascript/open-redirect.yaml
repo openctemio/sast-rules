@@ -1,0 +1,31 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.javascript.express.open-redirect
+  languages: [javascript, typescript]
+  severity: WARNING
+  message: >-
+    The redirect target comes from the request. An attacker can send users to
+    a phishing site through a link on your domain. Redirect only to relative
+    paths or to an allow-list of hosts, and compare the parsed host exactly.
+  metadata:
+    category: security
+    cwe: ["CWE-601: URL Redirection to Untrusted Site ('Open Redirect')"]
+    owasp: ["A01:2021 - Broken Access Control"]
+    confidence: MEDIUM
+    likelihood: MEDIUM
+    impact: MEDIUM
+  mode: taint
+  pattern-sources:
+  - pattern-either:
+    - pattern: $REQ.query
+    - pattern: $REQ.body
+    - pattern: $REQ.params
+    - pattern: '({query}: $T) => ...'
+    - pattern: query.$F
+  pattern-sinks:
+  - patterns:
+    - pattern-either:
+      - pattern: $RES.redirect($U)
+      - pattern: $RES.redirect($CODE, $U)
+    - focus-metavariable: $U

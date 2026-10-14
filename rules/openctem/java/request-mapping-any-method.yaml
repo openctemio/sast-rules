@@ -1,0 +1,31 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.java.spring.request-mapping-any-method
+  languages: [java]
+  severity: INFO
+  message: >-
+    @RequestMapping without method= answers every HTTP method, including GET
+    for an action that changes state, which skips CSRF protections built for
+    POST. Use @GetMapping/@PostMapping, or set method=.
+  metadata:
+    category: security
+    cwe: ["CWE-352: Cross-Site Request Forgery (CSRF)"]
+    owasp: ["A01:2021 - Broken Access Control"]
+    confidence: MEDIUM
+    likelihood: LOW
+    impact: MEDIUM
+  patterns:
+  - pattern-inside: |
+      @$CTRL
+      class $C { ... }
+  - pattern: |
+      @RequestMapping(...)
+      $RET $M(...) { ... }
+  - pattern-not: |
+      @RequestMapping(..., method = $X, ...)
+      $RET $M(...) { ... }
+  - metavariable-regex:
+      metavariable: $CTRL
+      regex: (RestController|Controller)
+  - focus-metavariable: $M

@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.python.deserialization.unsafe-loader
+  languages: [python]
+  severity: ERROR
+  message: >-
+    pickle, marshal, dill and yaml.load with a full Loader can run code while
+    loading. Data from outside the program must never reach them. Use JSON, or
+    yaml.safe_load.
+  metadata:
+    category: security
+    cwe: ["CWE-502: Deserialization of Untrusted Data"]
+    owasp: ["A08:2021 - Software and Data Integrity Failures"]
+    confidence: MEDIUM
+    likelihood: MEDIUM
+    impact: HIGH
+  pattern-either:
+  - pattern: pickle.loads(...)
+  - pattern: pickle.load(...)
+  - pattern: pickle.dumps(...)
+  - pattern: _pickle.loads(...)
+  - pattern: cPickle.loads(...)
+  - pattern: marshal.loads(...)
+  - pattern: dill.loads(...)
+  - pattern: yaml.load(..., Loader=yaml.Loader, ...)
+  - pattern: yaml.load(..., Loader=yaml.UnsafeLoader, ...)
+  - pattern: yaml.load(..., Loader=yaml.FullLoader, ...)
+  - pattern: yaml.load($F, yaml.Loader)
+  - pattern: yaml.load($F, yaml.UnsafeLoader)
+  - pattern: yaml.load($F, yaml.FullLoader)
+  - pattern: yaml.unsafe_load(...)

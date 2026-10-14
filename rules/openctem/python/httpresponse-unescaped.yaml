@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.python.django.httpresponse-unescaped
+  languages: [python]
+  severity: WARNING
+  message: >-
+    A response body is built outside the template engine and returned with
+    HttpResponse. Text placed into it is not HTML-escaped, so user data in it
+    can run script in the browser (XSS). Return render(...) or escape values
+    with django.utils.html.escape.
+  metadata:
+    category: security
+    cwe: ["CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"]
+    owasp: ["A03:2021 - Injection"]
+    confidence: LOW
+    likelihood: MEDIUM
+    impact: MEDIUM
+  patterns:
+  - pattern: HttpResponse($X, ...)
+  - pattern-not: HttpResponse("...", ...)
+  - pattern-not: HttpResponse()
+  - pattern-not: HttpResponse(json.dumps(...), ...)

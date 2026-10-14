@@ -1,0 +1,62 @@
+name: release
+
+# A tag v<semver> publishes the signed rules bundle:
+#   sast-rules-<version>.tar.gz          rules/ (rule files only), LICENSE, NOTICE, LICENSES/, VERSION
+#   sast-rules-<version>.tar.gz.sha256   its SHA-256
+#   sast-rules-<version>.tar.gz.sigstore.json  cosign keyless bundle (certificate, signature, Rekor proof)
+#   sast-rules-<version>.tar.gz.sig / .pem     the same signature and certificate, separately
+# Signed by this workflow's GitHub OIDC identity:
+#   https://github.com/openctemio/sast-rules/.github/workflows/release.yml@refs/tags/v<version>
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
+      - name: Install opengrep (pinned, signature verified)
+        run: scripts/install-opengrep.sh "$HOME/.local/bin"
+      - name: Check the rules
+        run: |
+          python3 scripts/check_rules.py rules
+          python3 scripts/gen_notice.py --check
+          opengrep scan --validate --config rules --disable-version-check /dev/null
+          opengrep scan --test --disable-version-check rules/
+      - name: Build the bundle
+        id: build
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "tag $TAG is not v<major>.<minor>.<patch>" >&2; exit 1; }
+          version="${TAG#v}"
+          scripts/build-bundle.sh "$version" dist
+          echo "file=dist/sast-rules-$version.tar.gz" >> "$GITHUB_OUTPUT"
+      - name: Sign
+        env:
+          FILE: ${{ steps.build.outputs.file }}
+        run: |
+          cosign sign-blob --yes --bundle "$FILE.sigstore.json" \
+            --output-signature "$FILE.sig" --output-certificate "$FILE.pem" "$FILE"
+          cosign verify-blob --bundle "$FILE.sigstore.json" \
+            --certificate-identity "https://github.com/${{ github.repository }}/.github/workflows/release.yml@${{ github.ref }}" \
+            --certificate-oidc-issuer https://token.actions.githubusercontent.com "$FILE"
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          FILE: ${{ steps.build.outputs.file }}
+        run: |
+          gh release create "$TAG" --verify-tag --title "$TAG" \
+            --notes "Signed bundle. Verify: cosign verify-blob --bundle $(basename "$FILE").sigstore.json --certificate-identity https://github.com/${{ github.repository }}/.github/workflows/release.yml@refs/tags/$TAG --certificate-oidc-issuer https://token.actions.githubusercontent.com $(basename "$FILE")" \
+            "$FILE" "$FILE.sha256" "$FILE.sigstore.json" "$FILE.sig" "$FILE.pem"

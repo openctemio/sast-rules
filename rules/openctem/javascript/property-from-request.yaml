@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.javascript.injection.property-name-from-input
+  languages: [javascript, typescript]
+  severity: WARNING
+  message: >-
+    An object property is written with a name taken from a loop over input
+    fields. A name like "__proto__" or "constructor" changes the object's
+    prototype or overwrites built-in behaviour. Check names against an
+    allow-list.
+  metadata:
+    category: security
+    cwe: ["CWE-915: Improperly Controlled Modification of Dynamically-Determined Object Attributes"]
+    owasp: ["A08:2021 - Software and Data Integrity Failures"]
+    confidence: LOW
+    likelihood: LOW
+    impact: MEDIUM
+  patterns:
+  - pattern-inside: |
+      for (const $F of $FIELDS) { ... }
+  - pattern: $OBJ[$F] = $V

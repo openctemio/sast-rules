@@ -1,0 +1,236 @@
+[
+ {
+  "path": ".github/dependabot.yml",
+  "start": 3,
+  "end": 6,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/dependabot.yml",
+  "start": 7,
+  "end": 14,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/codeql.yml",
+  "start": 36,
+  "end": 36,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/codeql.yml",
+  "start": 40,
+  "end": 40,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/codeql.yml",
+  "start": 49,
+  "end": 49,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/gin.yml",
+  "start": 19,
+  "end": 19,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/gin.yml",
+  "start": 23,
+  "end": 23,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/gin.yml",
+  "start": 27,
+  "end": 27,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/gin.yml",
+  "start": 61,
+  "end": 61,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/gin.yml",
+  "start": 67,
+  "end": 67,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/gin.yml",
+  "start": 71,
+  "end": 71,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/gin.yml",
+  "start": 84,
+  "end": 84,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/goreleaser.yml",
+  "start": 16,
+  "end": 16,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/goreleaser.yml",
+  "start": 20,
+  "end": 20,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/goreleaser.yml",
+  "start": 24,
+  "end": 24,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/trivy-scan.yml",
+  "start": 25,
+  "end": 25,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/trivy-scan.yml",
+  "start": 30,
+  "end": 30,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/trivy-scan.yml",
+  "start": 41,
+  "end": 41,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/trivy-scan.yml",
+  "start": 47,
+  "end": 47,
+  "language": "yaml"
+ },
+ {
+  "path": "context.go",
+  "start": 1162,
+  "end": 1171,
+  "language": "go"
+ },
+ {
+  "path": "render/bson.go",
+  "start": 26,
+  "end": 26,
+  "language": "go"
+ },
+ {
+  "path": "render/data.go",
+  "start": 24,
+  "end": 24,
+  "language": "go"
+ },
+ {
+  "path": "render/json.go",
+  "start": 73,
+  "end": 73,
+  "language": "go"
+ },
+ {
+  "path": "render/json.go",
+  "start": 84,
+  "end": 84,
+  "language": "go"
+ },
+ {
+  "path": "render/json.go",
+  "start": 103,
+  "end": 103,
+  "language": "go"
+ },
+ {
+  "path": "render/json.go",
+  "start": 107,
+  "end": 107,
+  "language": "go"
+ },
+ {
+  "path": "render/json.go",
+  "start": 125,
+  "end": 125,
+  "language": "go"
+ },
+ {
+  "path": "render/json.go",
+  "start": 130,
+  "end": 130,
+  "language": "go"
+ },
+ {
+  "path": "render/json.go",
+  "start": 134,
+  "end": 134,
+  "language": "go"
+ },
+ {
+  "path": "render/json.go",
+  "start": 138,
+  "end": 138,
+  "language": "go"
+ },
+ {
+  "path": "render/json.go",
+  "start": 142,
+  "end": 142,
+  "language": "go"
+ },
+ {
+  "path": "render/json.go",
+  "start": 174,
+  "end": 174,
+  "language": "go"
+ },
+ {
+  "path": "render/pdf.go",
+  "start": 19,
+  "end": 19,
+  "language": "go"
+ },
+ {
+  "path": "render/protobuf.go",
+  "start": 29,
+  "end": 29,
+  "language": "go"
+ },
+ {
+  "path": "render/text.go",
+  "start": 36,
+  "end": 36,
+  "language": "go"
+ },
+ {
+  "path": "render/text.go",
+  "start": 39,
+  "end": 39,
+  "language": "go"
+ },
+ {
+  "path": "render/toml.go",
+  "start": 29,
+  "end": 29,
+  "language": "go"
+ },
+ {
+  "path": "render/yaml.go",
+  "start": 29,
+  "end": 29,
+  "language": "go"
+ },
+ {
+  "path": "testdata/certificate/key.pem",
+  "start": 1,
+  "end": 2,
+  "language": "other"
+ }
+]

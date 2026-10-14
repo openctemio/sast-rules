@@ -1,0 +1,28 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.php.injection.command-exec-non-literal
+  languages: [php]
+  severity: ERROR
+  message: >-
+    A shell command is built from a value that is not a constant. If any part
+    comes from a user, it can run other commands. Pass a fixed command, and
+    escape every argument with escapeshellarg, or avoid the shell.
+  metadata:
+    category: security
+    cwe: ["CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"]
+    owasp: ["A03:2021 - Injection"]
+    confidence: LOW
+    likelihood: MEDIUM
+    impact: HIGH
+  patterns:
+  - pattern-either:
+    - pattern: shell_exec($CMD, ...)
+    - pattern: exec($CMD, ...)
+    - pattern: system($CMD, ...)
+    - pattern: passthru($CMD, ...)
+    - pattern: popen($CMD, ...)
+    - pattern: proc_open($CMD, ...)
+    - pattern: pcntl_exec($CMD, ...)
+  - pattern-not: $F("...", ...)
+  - pattern-not: $F(escapeshellarg(...), ...)

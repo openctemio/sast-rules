@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.php.injection.eval-non-literal
+  languages: [php]
+  severity: ERROR
+  message: >-
+    eval runs a string as PHP code, and this string is not a constant. If any
+    part of it can be influenced from outside, it is remote code execution.
+    Remove eval; include a fixed file or call the code directly.
+  metadata:
+    category: security
+    cwe: ["CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')"]
+    owasp: ["A03:2021 - Injection"]
+    confidence: LOW
+    likelihood: MEDIUM
+    impact: HIGH
+  patterns:
+  - pattern: eval($X)
+  - pattern-not: eval("...")

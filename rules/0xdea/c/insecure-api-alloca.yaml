@@ -1,0 +1,34 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/insecure-api-alloca.yaml
+rules:
+  - id: raptor-insecure-api-alloca
+    metadata:
+      author: Marco Ivaldi <raptor@0xdeadbeef.info>
+      category: security
+      subcategory:
+        - vuln
+      vulnerability_class: Dangerous Method or Function
+      likelihood: MEDIUM
+      impact: HIGH
+      confidence: HIGH
+      technology:
+        - c
+        - cpp
+      cwe:
+        - "CWE-676: Use of Potentially Dangerous Function"
+        - "CWE-1325: Improperly Controlled Sequential Memory Allocation"
+      owasp:
+        - A06:2025 - Insecure Design
+      references:
+        - https://nullprogram.com/blog/2019/10/28/
+        - https://docs.microsoft.com/en-us/cpp/sanitizers/asan-error-examples
+    message: >-
+      Use of alloca() is unsafe because it cannot ensure that the pointer 
+      returned points to a valid and usable block of memory. The allocation 
+      made may exceed the bounds of the stack, or even go further into other 
+      objects in memory, and alloca() cannot determine such an error.
+    severity: ERROR
+    languages:
+      - c
+      - cpp
+    pattern: alloca(...)

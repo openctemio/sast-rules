@@ -1,0 +1,21 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.python.web.cookie-not-secure
+  languages: [python]
+  severity: WARNING
+  message: >-
+    This cookie is set without secure=True (and httponly=True), so it is also
+    sent over plain HTTP and readable by scripts in the page. Set secure=True,
+    httponly=True and a samesite value.
+  metadata:
+    category: security
+    cwe: ["CWE-614: Sensitive Cookie in HTTPS Session Without 'Secure' Attribute"]
+    owasp: ["A05:2021 - Security Misconfiguration"]
+    confidence: MEDIUM
+    likelihood: LOW
+    impact: MEDIUM
+  patterns:
+  - pattern: $RESP.set_cookie(...)
+  - pattern-not: $RESP.set_cookie(..., secure=True, ...)
+  - pattern-not: $RESP.set_cookie(..., **$KW)

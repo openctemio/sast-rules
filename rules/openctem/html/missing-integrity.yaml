@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.html.integrity.missing-subresource-integrity
+  languages: [regex]
+  paths:
+    include: ["*.html", "*.htm", "*.djhtml", "*.jinja", "*.j2", "*.php", "*.jsp"]
+  severity: INFO
+  message: >-
+    A script or stylesheet is loaded from another host without an integrity
+    attribute. If that host or CDN is compromised, the page runs whatever it
+    serves. Add integrity="sha384-..." and crossorigin="anonymous", or host the
+    file yourself.
+  metadata:
+    category: security
+    cwe: ["CWE-353: Missing Support for Integrity Check"]
+    owasp: ["A08:2021 - Software and Data Integrity Failures"]
+    confidence: MEDIUM
+    likelihood: LOW
+    impact: MEDIUM
+  pattern-either:
+  - pattern-regex: <script(?![^>]*\bintegrity\s*=)[^>]*\bsrc\s*=\s*["'](?:https?:)?//[^>]*>
+  - pattern-regex: <link(?![^>]*\bintegrity\s*=)(?=[^>]*\brel\s*=\s*["']?stylesheet)[^>]*\bhref\s*=\s*["'](?:https?:)?//[^>]*>

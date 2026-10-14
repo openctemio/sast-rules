@@ -1,0 +1,1292 @@
+[
+ {
+  "path": ".github/actions/java-setup/action.yml",
+  "start": 15,
+  "end": 15,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/dependabot.yml",
+  "start": 3,
+  "end": 6,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/dependabot.yml",
+  "start": 7,
+  "end": 10,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/dependabot.yml",
+  "start": 11,
+  "end": 14,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/build.yml",
+  "start": 19,
+  "end": 19,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/build.yml",
+  "start": 21,
+  "end": 21,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/build.yml",
+  "start": 29,
+  "end": 29,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/build.yml",
+  "start": 31,
+  "end": 31,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/build.yml",
+  "start": 41,
+  "end": 41,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/lesson-vulnerability-triage.yml",
+  "start": 17,
+  "end": 17,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/release.yml",
+  "start": 16,
+  "end": 16,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/release.yml",
+  "start": 24,
+  "end": 27,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/release.yml",
+  "start": 37,
+  "end": 37,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/release.yml",
+  "start": 47,
+  "end": 47,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/release.yml",
+  "start": 52,
+  "end": 52,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/release.yml",
+  "start": 55,
+  "end": 55,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/release.yml",
+  "start": 61,
+  "end": 61,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/release.yml",
+  "start": 74,
+  "end": 74,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/release.yml",
+  "start": 96,
+  "end": 96,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/release.yml",
+  "start": 113,
+  "end": 113,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/release.yml",
+  "start": 121,
+  "end": 121,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/welcome.yml",
+  "start": 13,
+  "end": 13,
+  "language": "yaml"
+ },
+ {
+  "path": "docs/index.html",
+  "start": 7,
+  "end": 7,
+  "language": "html"
+ },
+ {
+  "path": "src/it/java/org/owasp/webgoat/playwright/webwolf/JwtUITest.java",
+  "start": 31,
+  "end": 31,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/container/service/LabelDebugService.java",
+  "start": 35,
+  "end": 35,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/container/service/LabelDebugService.java",
+  "start": 48,
+  "end": 48,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/container/service/LessonMenuService.java",
+  "start": 45,
+  "end": 45,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/container/service/SessionService.java",
+  "start": 22,
+  "end": 22,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge1/ImageServlet.java",
+  "start": 21,
+  "end": 21,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge2/ChainedXmlService.java",
+  "start": 59,
+  "end": 59,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge2/ChainedXmlService.java",
+  "start": 65,
+  "end": 65,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge5/Assignment5.java",
+  "start": 45,
+  "end": 49,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/challenges/challenge5/Assignment5.java",
+  "start": 50,
+  "end": 50,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/commandinjection/CommandExecutionService.java",
+  "start": 43,
+  "end": 43,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/cryptography/EncodingAssignment.java",
+  "start": 37,
+  "end": 37,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/cryptography/EncodingAssignment.java",
+  "start": 39,
+  "end": 39,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+  "start": 30,
+  "end": 30,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+  "start": 37,
+  "end": 37,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+  "start": 39,
+  "end": 39,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+  "start": 49,
+  "end": 49,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/cryptography/HashingAssignment.java",
+  "start": 55,
+  "end": 55,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/cryptography/SigningAssignment.java",
+  "start": 37,
+  "end": 37,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/deserialization/InsecureDeserializationTask.java",
+  "start": 42,
+  "end": 43,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/deserialization/SerializationHelper.java",
+  "start": 22,
+  "end": 22,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/hijacksession/HijackSessionAssignment.java",
+  "start": 70,
+  "end": 70,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/hijacksession/cas/HijackSessionAuthenticationProvider.java",
+  "start": 25,
+  "end": 25,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+  "start": 38,
+  "end": 38,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTSecretKeyEndpoint.java",
+  "start": 43,
+  "end": 43,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+  "start": 120,
+  "end": 120,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+  "start": 121,
+  "end": 121,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+  "start": 125,
+  "end": 125,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/jwt/JWTVotesEndpoint.java",
+  "start": 126,
+  "end": 126,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/jwt/claimmisuse/JWTHeaderJKUEndpoint.java",
+  "start": 57,
+  "end": 57,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/openredirect/OpenRedirectRealRedirect.java",
+  "start": 18,
+  "end": 22,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/pathtraversal/ProfileUploadRetrieval.java",
+  "start": 100,
+  "end": 101,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignment.java",
+  "start": 58,
+  "end": 58,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignment.java",
+  "start": 60,
+  "end": 60,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/spoofcookie/SpoofCookieAssignment.java",
+  "start": 77,
+  "end": 77,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/advanced/SqlInjectionChallenge.java",
+  "start": 59,
+  "end": 59,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/advanced/SqlInjectionChallenge.java",
+  "start": 61,
+  "end": 61,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson10.java",
+  "start": 56,
+  "end": 56,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson2.java",
+  "start": 49,
+  "end": 49,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5a.java",
+  "start": 52,
+  "end": 52,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson5b.java",
+  "start": 69,
+  "end": 69,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson8.java",
+  "start": 62,
+  "end": 62,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson8.java",
+  "start": 142,
+  "end": 142,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java",
+  "start": 65,
+  "end": 65,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/introduction/SqlInjectionLesson9.java",
+  "start": 94,
+  "end": 94,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/sqlinjection/mitigation/Servers.java",
+  "start": 51,
+  "end": 53,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/lessons/xxe/SimpleXXE.java",
+  "start": 77,
+  "end": 77,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/webwolf/FileServer.java",
+  "start": 63,
+  "end": 63,
+  "language": "java"
+ },
+ {
+  "path": "src/main/java/org/owasp/webgoat/webwolf/FileServer.java",
+  "start": 95,
+  "end": 95,
+  "language": "java"
+ },
+ {
+  "path": "src/main/resources/lessons/authbypass/html/AuthBypass.html",
+  "start": 23,
+  "end": 41,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/authbypass/html/AuthBypass.html",
+  "start": 43,
+  "end": 60,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/challenges/html/Challenge1.html",
+  "start": 16,
+  "end": 33,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/challenges/html/Challenge1.html",
+  "start": 38,
+  "end": 50,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/challenges/html/Challenge2.html",
+  "start": 49,
+  "end": 59,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/challenges/html/Challenge5.html",
+  "start": 70,
+  "end": 82,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/challenges/html/Challenge6.html",
+  "start": 103,
+  "end": 115,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/challenges/html/Challenge7.html",
+  "start": 61,
+  "end": 73,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/challenges/html/Challenge8.html",
+  "start": 235,
+  "end": 247,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/chromedevtools/html/ChromeDevTools.html",
+  "start": 25,
+  "end": 30,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/chromedevtools/html/ChromeDevTools.html",
+  "start": 46,
+  "end": 65,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/chromedevtools/html/ChromeDevTools.html",
+  "start": 67,
+  "end": 79,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/cia/html/CIA.html",
+  "start": 30,
+  "end": 36,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/clientsidefiltering/html/ClientSideFiltering.html",
+  "start": 96,
+  "end": 96,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/commandinjection/html/CommandInjection.html",
+  "start": 97,
+  "end": 108,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/commandinjection/html/CommandInjection.html",
+  "start": 119,
+  "end": 139,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/commandinjection/html/CommandInjection.html",
+  "start": 150,
+  "end": 164,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/commandinjection/html/CommandInjection.html",
+  "start": 175,
+  "end": 193,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/commandinjection/html/CommandInjection.html",
+  "start": 227,
+  "end": 245,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/commandinjection/html/CommandInjection.html",
+  "start": 280,
+  "end": 296,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/cryptography/html/Cryptography.html",
+  "start": 31,
+  "end": 37,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/cryptography/html/Cryptography.html",
+  "start": 48,
+  "end": 53,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/cryptography/html/Cryptography.html",
+  "start": 65,
+  "end": 71,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/cryptography/html/Cryptography.html",
+  "start": 90,
+  "end": 96,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/cryptography/html/Cryptography.html",
+  "start": 113,
+  "end": 119,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/cryptography/html/TimingAttacks.html",
+  "start": 13,
+  "end": 17,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/cryptography/html/TimingAttacks.html",
+  "start": 33,
+  "end": 37,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/cryptography/html/TimingAttacks.html",
+  "start": 53,
+  "end": 57,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/cryptography/html/TimingAttacks.html",
+  "start": 73,
+  "end": 87,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/csrf/html/CSRF.html",
+  "start": 16,
+  "end": 24,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/csrf/html/CSRF.html",
+  "start": 35,
+  "end": 48,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/csrf/html/CSRF.html",
+  "start": 93,
+  "end": 102,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/csrf/html/CSRF.html",
+  "start": 213,
+  "end": 222,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/csrf/html/CSRF.html",
+  "start": 237,
+  "end": 245,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/deserialization/html/InsecureDeserialization.html",
+  "start": 26,
+  "end": 33,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/hijacksession/html/HijackSession.html",
+  "start": 5,
+  "end": 6,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/hijacksession/templates/hijackform.html",
+  "start": 3,
+  "end": 22,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/httpbasics/html/HttpBasics.html",
+  "start": 26,
+  "end": 30,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/httpbasics/html/HttpBasics.html",
+  "start": 45,
+  "end": 50,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/httpbasics/html/HttpBasics.html",
+  "start": 114,
+  "end": 120,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/httpparameterpollution/html/HttpParameterPollution.html",
+  "start": 40,
+  "end": 49,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/httpproxies/html/HttpProxies.html",
+  "start": 17,
+  "end": 24,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/httpproxies/html/HttpProxies.html",
+  "start": 42,
+  "end": 49,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/idor/html/IDOR.html",
+  "start": 23,
+  "end": 37,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/idor/html/IDOR.html",
+  "start": 81,
+  "end": 86,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/idor/html/IDOR.html",
+  "start": 108,
+  "end": 114,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/insecurelogin/html/InsecureLogin.html",
+  "start": 18,
+  "end": 24,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/insecurelogin/html/InsecureLogin.html",
+  "start": 26,
+  "end": 34,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/documentation/JWT_decode.adoc",
+  "start": 21,
+  "end": 21,
+  "language": "other"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/documentation/JWT_libraries.adoc",
+  "start": 28,
+  "end": 28,
+  "language": "other"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/documentation/JWT_libraries.adoc",
+  "start": 40,
+  "end": 40,
+  "language": "other"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/documentation/JWT_libraries.adoc",
+  "start": 56,
+  "end": 56,
+  "language": "other"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/documentation/JWT_libraries_assignment.adoc",
+  "start": 7,
+  "end": 7,
+  "language": "other"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/documentation/JWT_libraries_assignment2.adoc",
+  "start": 7,
+  "end": 7,
+  "language": "other"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/documentation/JWT_libraries_solution.adoc",
+  "start": 7,
+  "end": 7,
+  "language": "other"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/documentation/JWT_signing_solution.adoc",
+  "start": 35,
+  "end": 35,
+  "language": "other"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/documentation/JWT_signing_solution.adoc",
+  "start": 77,
+  "end": 77,
+  "language": "other"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/html/JWT.html",
+  "start": 20,
+  "end": 35,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/html/JWT.html",
+  "start": 125,
+  "end": 132,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/html/JWT.html",
+  "start": 158,
+  "end": 171,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/html/JWT.html",
+  "start": 323,
+  "end": 323,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/html/JWT.html",
+  "start": 389,
+  "end": 389,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/jwt/images/logs.txt",
+  "start": 2,
+  "end": 2,
+  "language": "other"
+ },
+ {
+  "path": "src/main/resources/lessons/lessontemplate/html/LessonTemplate.html",
+  "start": 48,
+  "end": 61,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/logging/html/LogSpoofing.html",
+  "start": 17,
+  "end": 25,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/logging/html/LogSpoofing.html",
+  "start": 39,
+  "end": 47,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/missingac/html/MissingFunctionAC.html",
+  "start": 53,
+  "end": 62,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/missingac/html/MissingFunctionAC.html",
+  "start": 76,
+  "end": 84,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/missingac/html/MissingFunctionAC.html",
+  "start": 138,
+  "end": 146,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/openredirect/html/OpenRedirect.html",
+  "start": 18,
+  "end": 23,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/openredirect/html/OpenRedirect.html",
+  "start": 33,
+  "end": 37,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/openredirect/html/OpenRedirect.html",
+  "start": 48,
+  "end": 54,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/openredirect/html/OpenRedirect.html",
+  "start": 64,
+  "end": 76,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/openredirect/html/OpenRedirect.html",
+  "start": 100,
+  "end": 104,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/openredirect/html/OpenRedirect.html",
+  "start": 116,
+  "end": 121,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/passwordreset/html/PasswordReset.html",
+  "start": 144,
+  "end": 164,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/passwordreset/templates/password_reset.html",
+  "start": 12,
+  "end": 26,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/passwordstorage/html/PasswordStorage.html",
+  "start": 21,
+  "end": 25,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/passwordstorage/html/PasswordStorage.html",
+  "start": 42,
+  "end": 53,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/passwordstorage/html/PasswordStorage.html",
+  "start": 104,
+  "end": 119,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/passwordstorage/html/PasswordStorage.html",
+  "start": 140,
+  "end": 144,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/pathtraversal/html/PathTraversal.html",
+  "start": 192,
+  "end": 205,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/securepasswords/html/SecurePasswords.html",
+  "start": 21,
+  "end": 35,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/securitymisconfiguration/html/SecurityMisconfiguration.html",
+  "start": 18,
+  "end": 28,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/securitymisconfiguration/html/SecurityMisconfiguration.html",
+  "start": 47,
+  "end": 53,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/securitymisconfiguration/html/SecurityMisconfiguration.html",
+  "start": 72,
+  "end": 78,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/spoofcookie/html/SpoofCookie.html",
+  "start": 5,
+  "end": 6,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjection.html",
+  "start": 16,
+  "end": 29,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjection.html",
+  "start": 40,
+  "end": 53,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjection.html",
+  "start": 64,
+  "end": 77,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjection.html",
+  "start": 88,
+  "end": 101,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjection.html",
+  "start": 189,
+  "end": 207,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjection.html",
+  "start": 217,
+  "end": 234,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjection.html",
+  "start": 245,
+  "end": 262,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjection.html",
+  "start": 274,
+  "end": 287,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjectionAdvanced.html",
+  "start": 21,
+  "end": 33,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjectionAdvanced.html",
+  "start": 34,
+  "end": 46,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjectionAdvanced.html",
+  "start": 169,
+  "end": 176,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjectionMitigations.html",
+  "start": 26,
+  "end": 36,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjectionMitigations.html",
+  "start": 45,
+  "end": 55,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjectionMitigations.html",
+  "start": 73,
+  "end": 86,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjectionMitigations.html",
+  "start": 96,
+  "end": 109,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/sqlinjection/html/SqlInjectionMitigations.html",
+  "start": 176,
+  "end": 187,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/ssrf/html/SSRF.html",
+  "start": 13,
+  "end": 25,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/ssrf/html/SSRF.html",
+  "start": 35,
+  "end": 47,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/vulnerablecomponents/html/VulnerableComponents.html",
+  "start": 5,
+  "end": 5,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/vulnerablecomponents/html/VulnerableComponents.html",
+  "start": 104,
+  "end": 113,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/webauthn/html/WebAuthn.html",
+  "start": 31,
+  "end": 38,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/webauthn/html/WebAuthn.html",
+  "start": 62,
+  "end": 69,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/webauthn/html/WebAuthn.html",
+  "start": 95,
+  "end": 102,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/webauthn/html/WebAuthn.html",
+  "start": 123,
+  "end": 129,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/webgoatintroduction/html/WebGoatIntroduction.html",
+  "start": 14,
+  "end": 31,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/webgoatintroduction/html/WebGoatIntroduction.html",
+  "start": 35,
+  "end": 54,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/webwolfintroduction/html/WebWolfIntroduction.html",
+  "start": 23,
+  "end": 40,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/xss/html/CrossSiteScripting.html",
+  "start": 13,
+  "end": 24,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/xss/html/CrossSiteScripting.html",
+  "start": 134,
+  "end": 139,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/xss/html/CrossSiteScripting.html",
+  "start": 149,
+  "end": 154,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/xss/html/CrossSiteScripting.html",
+  "start": 169,
+  "end": 175,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/xss/html/CrossSiteScriptingMitigation.html",
+  "start": 24,
+  "end": 34,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/xss/html/CrossSiteScriptingMitigation.html",
+  "start": 44,
+  "end": 54,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/lessons/xss/html/CrossSiteScriptingStored.html",
+  "start": 68,
+  "end": 73,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/ace.js",
+  "start": 1740,
+  "end": 1740,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/ace.js",
+  "start": 4491,
+  "end": 4491,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/ace.js",
+  "start": 6291,
+  "end": 6291,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/ace.js",
+  "start": 6429,
+  "end": 6429,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/ace.js",
+  "start": 9471,
+  "end": 9471,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/ace.js",
+  "start": 9807,
+  "end": 9812,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/ace.js",
+  "start": 9859,
+  "end": 9864,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/ace.js",
+  "start": 11797,
+  "end": 11797,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/ace.js",
+  "start": 11808,
+  "end": 11808,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/backbone-min.js",
+  "start": 1,
+  "end": 1,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/jquery-ui-1.10.4.js",
+  "start": 622,
+  "end": 622,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/jquery-ui-1.10.4.js",
+  "start": 7171,
+  "end": 7171,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/jquery-ui-1.10.4.js",
+  "start": 11639,
+  "end": 11639,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/jquery-ui-1.10.4.js",
+  "start": 11651,
+  "end": 11651,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/mode-java.js",
+  "start": 573,
+  "end": 575,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/mode-java.js",
+  "start": 576,
+  "end": 578,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/js/libs/underscore-min.js",
+  "start": 6,
+  "end": 6,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+  "start": 843,
+  "end": 843,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+  "start": 4079,
+  "end": 4079,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/static/plugins/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js",
+  "start": 4088,
+  "end": 4088,
+  "language": "javascript"
+ },
+ {
+  "path": "src/main/resources/webgoat/templates/login.html",
+  "start": 31,
+  "end": 44,
+  "language": "html"
+ },
+ {
+  "path": "src/main/resources/webwolf/templates/files.html",
+  "start": 38,
+  "end": 47,
+  "language": "html"
+ }
+]
