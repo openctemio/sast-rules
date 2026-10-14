@@ -4,7 +4,6 @@ name: release
 #   sast-rules-<version>.tar.gz          rules/ (rule files only), LICENSE, NOTICE, LICENSES/, VERSION
 #   sast-rules-<version>.tar.gz.sha256   its SHA-256
 #   sast-rules-<version>.tar.gz.sigstore.json  cosign keyless bundle (certificate, signature, Rekor proof)
-#   sast-rules-<version>.tar.gz.sig / .pem     the same signature and certificate, separately
 # Signed by this workflow's GitHub OIDC identity:
 #   https://github.com/openctemio/sast-rules/.github/workflows/release.yml@refs/tags/v<version>
 
@@ -46,8 +45,7 @@ jobs:
         env:
           FILE: ${{ steps.build.outputs.file }}
         run: |
-          cosign sign-blob --yes --bundle "$FILE.sigstore.json" \
-            --output-signature "$FILE.sig" --output-certificate "$FILE.pem" "$FILE"
+          cosign sign-blob --yes --bundle "$FILE.sigstore.json" "$FILE"
           cosign verify-blob --bundle "$FILE.sigstore.json" \
             --certificate-identity "https://github.com/${{ github.repository }}/.github/workflows/release.yml@${{ github.ref }}" \
             --certificate-oidc-issuer https://token.actions.githubusercontent.com "$FILE"
@@ -59,4 +57,4 @@ jobs:
         run: |
           gh release create "$TAG" --verify-tag --title "$TAG" \
             --notes "Signed bundle. Verify: cosign verify-blob --bundle $(basename "$FILE").sigstore.json --certificate-identity https://github.com/${{ github.repository }}/.github/workflows/release.yml@refs/tags/$TAG --certificate-oidc-issuer https://token.actions.githubusercontent.com $(basename "$FILE")" \
-            "$FILE" "$FILE.sha256" "$FILE.sigstore.json" "$FILE.sig" "$FILE.pem"
+            "$FILE" "$FILE.sha256" "$FILE.sigstore.json"
