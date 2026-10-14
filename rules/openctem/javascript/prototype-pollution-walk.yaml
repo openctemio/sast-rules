@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.javascript.injection.prototype-pollution-walk
+  languages: [javascript, typescript]
+  severity: WARNING
+  message: >-
+    An object is walked with keys from a list (obj = obj[key] in a loop). If the
+    keys come from outside, "__proto__" or "constructor" reach Object.prototype
+    and a later assignment pollutes every object. Reject those keys, or use
+    Object.create(null) / Map.
+  metadata:
+    category: security
+    cwe: ["CWE-1321: Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')"]
+    owasp: ["A08:2021 - Software and Data Integrity Failures"]
+    confidence: LOW
+    likelihood: LOW
+    impact: MEDIUM
+  patterns:
+  - pattern-either:
+    - pattern-inside: for (...) {...}
+    - pattern-inside: while (...) {...}
+    - pattern-inside: $LIST.forEach(...)
+  - pattern: $O = $O[$K]
+  - pattern-not: $O = $O["..."]

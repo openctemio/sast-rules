@@ -1,0 +1,1110 @@
+OpenCTEM sast-rules
+Copyright (c) 2026 OpenCTEM contributors. Licensed under the MIT licence (LICENSE).
+
+This repository includes files imported from the projects below. Each
+imported rule file keeps its upstream licence (SPDX-License-Identifier
+header) and names the upstream file it comes from (Source header). The
+only change to an imported rule file is the addition of those two header
+lines. Licence texts: LICENSES/ (MIT texts are in each upstream's
+repository and reproduced below by copyright line).
+
+Upstream projects
+-----------------
+- GitLab sast-rules (https://gitlab.com/gitlab-org/security-products/sast-rules): MIT (rules marked MIT), Apache-2.0 (rules derived from gosec and bandit); Copyright (c) 2011-present GitLab Inc.
+- 0xdea semgrep-rules (https://github.com/0xdea/semgrep-rules): MIT; Copyright (c) 2022 raptor
+- elttam semgrep-rules (https://github.com/elttam/semgrep-rules): MIT; Copyright (c) 2020 Semgrep (as stated in the upstream LICENSE)
+
+Test fixtures (files next to a rule, used only by opengrep --test) keep
+their upstream licence line. Fixtures marked LGPL-3.0 (from find-sec-bugs
+and security-code-scan, via GitLab sast-rules) are licensed under
+LGPL-3.0 (LICENSES/LGPL-3.0-only.txt, LICENSES/GPL-3.0-only.txt). Release
+bundles contain rule files only, never fixtures.
+
+MIT licence text (applies to every file marked MIT below, with the
+copyright holder named for its upstream):
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Imported rule files
+-------------------
+rules/0xdea/c/argv-envp-access.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/argv-envp-access.yaml
+rules/0xdea/c/command-injection.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/command-injection.yaml
+rules/0xdea/c/double-free.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/double-free.yaml
+rules/0xdea/c/format-string-bugs.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/format-string-bugs.yaml
+rules/0xdea/c/high-entropy-assignment.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/high-entropy-assignment.yaml
+rules/0xdea/c/incorrect-order-setuid-setgid.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/incorrect-order-setuid-setgid.yaml
+rules/0xdea/c/incorrect-unsigned-comparison.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/incorrect-unsigned-comparison.yaml
+rules/0xdea/c/incorrect-use-of-free.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/incorrect-use-of-free.yaml
+rules/0xdea/c/incorrect-use-of-memset.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/incorrect-use-of-memset.yaml
+rules/0xdea/c/incorrect-use-of-sizeof.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/incorrect-use-of-sizeof.yaml
+rules/0xdea/c/incorrect-use-of-strncat.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/incorrect-use-of-strncat.yaml
+rules/0xdea/c/insecure-api-access-stat.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/insecure-api-access-stat.yaml
+rules/0xdea/c/insecure-api-alloca.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/insecure-api-alloca.yaml
+rules/0xdea/c/insecure-api-ato.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/insecure-api-ato.yaml
+rules/0xdea/c/insecure-api-gets.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/insecure-api-gets.yaml
+rules/0xdea/c/insecure-api-mktemp-tmpnam-tempnam.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/insecure-api-mktemp-tmpnam-tempnam.yaml
+rules/0xdea/c/insecure-api-rand-srand.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/insecure-api-rand-srand.yaml
+rules/0xdea/c/insecure-api-scanf.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/insecure-api-scanf.yaml
+rules/0xdea/c/insecure-api-signal.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/insecure-api-signal.yaml
+rules/0xdea/c/insecure-api-sprintf-vsprintf.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/insecure-api-sprintf-vsprintf.yaml
+rules/0xdea/c/insecure-api-strcpy-strcat.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/insecure-api-strcpy-strcat.yaml
+rules/0xdea/c/integer-truncation.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/integer-truncation.yaml
+rules/0xdea/c/integer-wraparound.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/integer-wraparound.yaml
+rules/0xdea/c/interesting-api-calls.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/interesting-api-calls.yaml
+rules/0xdea/c/memory-address-exposure.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/memory-address-exposure.yaml
+rules/0xdea/c/mismatched-memory-management-cpp.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/mismatched-memory-management-cpp.yaml
+rules/0xdea/c/mismatched-memory-management.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/mismatched-memory-management.yaml
+rules/0xdea/c/missing-break-in-switch.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/missing-break-in-switch.yaml
+rules/0xdea/c/missing-default-in-switch.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/missing-default-in-switch.yaml
+rules/0xdea/c/missing-return.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/missing-return.yaml
+rules/0xdea/c/off-by-one.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/off-by-one.yaml
+rules/0xdea/c/overlapping-source-destination.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/overlapping-source-destination.yaml
+rules/0xdea/c/pointer-subtraction.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/pointer-subtraction.yaml
+rules/0xdea/c/putenv-stack-var.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/putenv-stack-var.yaml
+rules/0xdea/c/regex-dos.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/regex-dos.yaml
+rules/0xdea/c/ret-stack-address.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/ret-stack-address.yaml
+rules/0xdea/c/signed-unsigned-conversion.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/signed-unsigned-conversion.yaml
+rules/0xdea/c/suspicious-assert.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/suspicious-assert.yaml
+rules/0xdea/c/typos.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/typos.yaml
+rules/0xdea/c/unchecked-ret-malloc.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/unchecked-ret-malloc.yaml
+rules/0xdea/c/unchecked-ret-scanf.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/unchecked-ret-scanf.yaml
+rules/0xdea/c/unchecked-ret-setuid-seteuid.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/unchecked-ret-setuid-seteuid.yaml
+rules/0xdea/c/unsafe-ret-snprintf-vsnprintf.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/unsafe-ret-snprintf-vsnprintf.yaml
+rules/0xdea/c/unsafe-ret-strlcpy-strlcat.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/unsafe-ret-strlcpy-strlcat.yaml
+rules/0xdea/c/unsafe-strlen.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/unsafe-strlen.yaml
+rules/0xdea/c/unterminated-string-strncpy.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/unterminated-string-strncpy.yaml
+rules/0xdea/c/use-of-source-size-in-copy.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/use-of-source-size-in-copy.yaml
+rules/0xdea/c/write-into-stack-buffer.yaml
+  licence: MIT
+  source:  https://github.com/0xdea/semgrep-rules/blob/dae50da6e6e629750f1daec73a01ef9206a372ab/rules/c/write-into-stack-buffer.yaml
+rules/elttam/go/lang/security/audit/executable-symlink.yaml
+  licence: MIT
+  source:  https://github.com/elttam/semgrep-rules/blob/244268562cc92d33f54b8a60a187df5520f91b26/rules/go/lang/security/audit/executable-symlink.yaml
+rules/elttam/go/lang/security/audit/sprintf-plain-string.yaml
+  licence: MIT
+  source:  https://github.com/elttam/semgrep-rules/blob/244268562cc92d33f54b8a60a187df5520f91b26/rules/go/lang/security/audit/sprintf-plain-string.yaml
+rules/elttam/go/lang/security/audit/uintptr-nonatomic.yaml
+  licence: MIT
+  source:  https://github.com/elttam/semgrep-rules/blob/244268562cc92d33f54b8a60a187df5520f91b26/rules/go/lang/security/audit/uintptr-nonatomic.yaml
+rules/elttam/java/lang/security/audit/crypto/gcm-static-iv.yml
+  licence: MIT
+  source:  https://github.com/elttam/semgrep-rules/blob/244268562cc92d33f54b8a60a187df5520f91b26/rules/java/lang/security/audit/crypto/gcm-static-iv.yml
+rules/elttam/java/lang/security/audit/crypto/randomstringutils.yml
+  licence: MIT
+  source:  https://github.com/elttam/semgrep-rules/blob/244268562cc92d33f54b8a60a187df5520f91b26/rules/java/lang/security/audit/crypto/randomstringutils.yml
+rules/elttam/java/spring/security/audit/remoting/UnsafeHttpInvokerServiceExporterXml.yml
+  licence: MIT
+  source:  https://github.com/elttam/semgrep-rules/blob/244268562cc92d33f54b8a60a187df5520f91b26/rules/java/spring/security/audit/remoting/UnsafeHttpInvokerServiceExporterXml.yml
+rules/elttam/php/php-filter-chain-read-from-oracle.yml
+  licence: MIT
+  source:  https://github.com/elttam/semgrep-rules/blob/244268562cc92d33f54b8a60a187df5520f91b26/rules/php/php-filter-chain-read-from-oracle.yml
+rules/gitlab/csharp/crypto/rule-WeakCipherAlgorithm.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/crypto/rule-WeakCipherAlgorithm.yml
+rules/gitlab/csharp/crypto/rule-WeakCipherMode.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/crypto/rule-WeakCipherMode.yml
+rules/gitlab/csharp/crypto/rule-WeakHashingFunction.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/crypto/rule-WeakHashingFunction.yml
+rules/gitlab/csharp/crypto/rule-WeakRNG.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/crypto/rule-WeakRNG.yml
+rules/gitlab/csharp/csrf/rule-Csrf.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/csrf/rule-Csrf.yml
+rules/gitlab/csharp/deserialization/rule-InsecureDeserialization.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/deserialization/rule-InsecureDeserialization.yml
+rules/gitlab/csharp/endpoint/rule-UnvalidatedRedirect.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/endpoint/rule-UnvalidatedRedirect.yml
+rules/gitlab/csharp/injection/rule-CommandInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/injection/rule-CommandInjection.yml
+rules/gitlab/csharp/injection/rule-LdapInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/injection/rule-LdapInjection.yml
+rules/gitlab/csharp/injection/rule-SQLInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/injection/rule-SQLInjection.yml
+rules/gitlab/csharp/injection/rule-XPathInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/injection/rule-XPathInjection.yml
+rules/gitlab/csharp/injection/rule-XmlDocumentXXEInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/injection/rule-XmlDocumentXXEInjection.yml
+rules/gitlab/csharp/injection/rule-XmlReaderXXEInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/injection/rule-XmlReaderXXEInjection.yml
+rules/gitlab/csharp/other/rule-UnsafeXSLTSettingUsed.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/other/rule-UnsafeXSLTSettingUsed.yml
+rules/gitlab/csharp/password/rule-PasswordComplexity.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/password/rule-PasswordComplexity.yml
+rules/gitlab/csharp/path/rule-PathTraversal.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/path/rule-PathTraversal.yml
+rules/gitlab/csharp/validation/rule-InputValidation.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/validation/rule-InputValidation.yml
+rules/gitlab/csharp/xss/rule-HtmlElementXss.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/xss/rule-HtmlElementXss.yml
+rules/gitlab/csharp/xss/rule-ScriptXss.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/csharp/xss/rule-ScriptXss.yml
+rules/gitlab/go/blocklist/rule-blocklist-des.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/blocklist/rule-blocklist-des.yml
+rules/gitlab/go/blocklist/rule-blocklist-md5.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/blocklist/rule-blocklist-md5.yml
+rules/gitlab/go/blocklist/rule-blocklist-rc4.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/blocklist/rule-blocklist-rc4.yml
+rules/gitlab/go/blocklist/rule-blocklist-sha1.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/blocklist/rule-blocklist-sha1.yml
+rules/gitlab/go/crypto/rule-badtlssettings.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/crypto/rule-badtlssettings.yml
+rules/gitlab/go/crypto/rule-insecure-ignore-host-key.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/crypto/rule-insecure-ignore-host-key.yml
+rules/gitlab/go/crypto/rule-weakkeystrength.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/crypto/rule-weakkeystrength.yml
+rules/gitlab/go/crypto/rule-weakrandsource.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/crypto/rule-weakrandsource.yml
+rules/gitlab/go/file_permissions/rule-fileperm.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/file_permissions/rule-fileperm.yml
+rules/gitlab/go/file_permissions/rule-mkdir.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/file_permissions/rule-mkdir.yml
+rules/gitlab/go/filesystem/rule-decompression-bomb.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/filesystem/rule-decompression-bomb.yml
+rules/gitlab/go/filesystem/rule-fileread.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/filesystem/rule-fileread.yml
+rules/gitlab/go/filesystem/rule-httprootdir.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/filesystem/rule-httprootdir.yml
+rules/gitlab/go/filesystem/rule-poorwritepermissions.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/filesystem/rule-poorwritepermissions.yml
+rules/gitlab/go/filesystem/rule-tempfiles.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/filesystem/rule-tempfiles.yml
+rules/gitlab/go/filesystem/rule-ziparchive.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/filesystem/rule-ziparchive.yml
+rules/gitlab/go/http/rule-http-serve.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/http/rule-http-serve.yml
+rules/gitlab/go/injection/rule-template-injection.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/injection/rule-template-injection.yml
+rules/gitlab/go/leak/rule-pprof-endpoint.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/leak/rule-pprof-endpoint.yml
+rules/gitlab/go/memory/rule-integer-overflow.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/memory/rule-integer-overflow.yml
+rules/gitlab/go/memory/rule-memoryaliasing.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/memory/rule-memoryaliasing.yml
+rules/gitlab/go/network/rule-bind-to-all-interfaces.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/network/rule-bind-to-all-interfaces.yml
+rules/gitlab/go/sql/rule-concat-sqli.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/sql/rule-concat-sqli.yml
+rules/gitlab/go/subproc/rule-subproc.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/subproc/rule-subproc.yml
+rules/gitlab/go/unsafe/rule-unsafe.yml
+  licence: Apache-2.0 (Apache 2.0 (c) gosec)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/go/unsafe/rule-unsafe.yml
+rules/gitlab/java/cookie/rule-CookieInsecure.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/cookie/rule-CookieInsecure.yml
+rules/gitlab/java/cookie/rule-HttpResponseSplitting.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/cookie/rule-HttpResponseSplitting.yml
+rules/gitlab/java/cookie/rule-RequestParamToHeader.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/cookie/rule-RequestParamToHeader.yml
+rules/gitlab/java/cors/rule-PermissiveCORSInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/cors/rule-PermissiveCORSInjection.yml
+rules/gitlab/java/crypto/rule-BlowfishKeySize.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/crypto/rule-BlowfishKeySize.yml
+rules/gitlab/java/crypto/rule-CipherECBMode.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/crypto/rule-CipherECBMode.yml
+rules/gitlab/java/crypto/rule-CustomMessageDigest.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/crypto/rule-CustomMessageDigest.yml
+rules/gitlab/java/crypto/rule-HazelcastSymmetricEncryption.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/crypto/rule-HazelcastSymmetricEncryption.yml
+rules/gitlab/java/crypto/rule-InsufficientKeySizeRsa.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/crypto/rule-InsufficientKeySizeRsa.yml
+rules/gitlab/java/crypto/rule-NullCipher.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/crypto/rule-NullCipher.yml
+rules/gitlab/java/crypto/rule-RsaNoPadding.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/crypto/rule-RsaNoPadding.yml
+rules/gitlab/java/crypto/rule-WeakMessageDigest.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/crypto/rule-WeakMessageDigest.yml
+rules/gitlab/java/crypto/rule-WeakTLSProtocolDefaultHttpClient.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/crypto/rule-WeakTLSProtocolDefaultHttpClient.yml
+rules/gitlab/java/crypto/rule-WeakTLSProtocolSSLContext.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/crypto/rule-WeakTLSProtocolSSLContext.yml
+rules/gitlab/java/endpoint/rule-HostnameVerifier.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/endpoint/rule-HostnameVerifier.yml
+rules/gitlab/java/endpoint/rule-UnvalidatedRedirect.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/endpoint/rule-UnvalidatedRedirect.yml
+rules/gitlab/java/endpoint/rule-X509TrustManager.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/endpoint/rule-X509TrustManager.yml
+rules/gitlab/java/file/rule-FileUploadFileName.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/file/rule-FileUploadFileName.yml
+rules/gitlab/java/file/rule-FilenameUtils.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/file/rule-FilenameUtils.yml
+rules/gitlab/java/inject/rule-CommandInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/inject/rule-CommandInjection.yml
+rules/gitlab/java/inject/rule-ELInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/inject/rule-ELInjection.yml
+rules/gitlab/java/inject/rule-FileDisclosureRequestDispatcher.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/inject/rule-FileDisclosureRequestDispatcher.yml
+rules/gitlab/java/inject/rule-FileDisclosureSpringFramework.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/inject/rule-FileDisclosureSpringFramework.yml
+rules/gitlab/java/inject/rule-HttpParameterPollution.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/inject/rule-HttpParameterPollution.yml
+rules/gitlab/java/inject/rule-LDAPInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/inject/rule-LDAPInjection.yml
+rules/gitlab/java/inject/rule-OgnlInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/inject/rule-OgnlInjection.yml
+rules/gitlab/java/inject/rule-SpotbugsPathTraversalAbsolute.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/inject/rule-SpotbugsPathTraversalAbsolute.yml
+rules/gitlab/java/ldap/rule-AnonymousLDAP.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/ldap/rule-AnonymousLDAP.yml
+rules/gitlab/java/password/rule-ConstantDBPassword.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/password/rule-ConstantDBPassword.yml
+rules/gitlab/java/password/rule-EmptyDBPassword.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/password/rule-EmptyDBPassword.yml
+rules/gitlab/java/password/rule-HardcodePassword.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/password/rule-HardcodePassword.yml
+rules/gitlab/java/perm/rule-DangerousPermissions.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/perm/rule-DangerousPermissions.yml
+rules/gitlab/java/perm/rule-OverlyPermissiveFilePermissionInline.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/perm/rule-OverlyPermissiveFilePermissionInline.yml
+rules/gitlab/java/script/rule-ScriptInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/script/rule-ScriptInjection.yml
+rules/gitlab/java/script/rule-SpringSpelExpressionParser.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/script/rule-SpringSpelExpressionParser.yml
+rules/gitlab/java/smtp/rule-InsecureSmtp.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/smtp/rule-InsecureSmtp.yml
+rules/gitlab/java/smtp/rule-SmtpClient.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/smtp/rule-SmtpClient.yml
+rules/gitlab/java/ssrf/rule-SSRF.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/ssrf/rule-SSRF.yml
+rules/gitlab/java/strings/rule-BadHexConversion.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/strings/rule-BadHexConversion.yml
+rules/gitlab/java/strings/rule-FormatStringManipulation.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/strings/rule-FormatStringManipulation.yml
+rules/gitlab/java/strings/rule-ModifyAfterValidation.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/strings/rule-ModifyAfterValidation.yml
+rules/gitlab/java/strings/rule-NormalizeAfterValidation.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/strings/rule-NormalizeAfterValidation.yml
+rules/gitlab/java/templateinjection/rule-TemplateInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/templateinjection/rule-TemplateInjection.yml
+rules/gitlab/java/unsafe/rule-ExternalConfigControl.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/unsafe/rule-ExternalConfigControl.yml
+rules/gitlab/java/xml/rule-SAMLIgnoreComments.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/xml/rule-SAMLIgnoreComments.yml
+rules/gitlab/java/xml/rule-XmlDecoder.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/xml/rule-XmlDecoder.yml
+rules/gitlab/java/xml/rule-XsltTransform.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/xml/rule-XsltTransform.yml
+rules/gitlab/java/xss/rule-WicketXSS.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/xss/rule-WicketXSS.yml
+rules/gitlab/java/xss/rule-XSSReqParamToServletWriter.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/xss/rule-XSSReqParamToServletWriter.yml
+rules/gitlab/java/xxe/rule-XMLRdr.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/java/xxe/rule-XMLRdr.yml
+rules/gitlab/javascript/buf/rule-buffer-noassert-read.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/javascript/buf/rule-buffer-noassert-read.yml
+rules/gitlab/javascript/buf/rule-buffer-noassert-write.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/javascript/buf/rule-buffer-noassert-write.yml
+rules/gitlab/javascript/buf/rule-detect-new-buffer.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/javascript/buf/rule-detect-new-buffer.yml
+rules/gitlab/javascript/dos/rule-non-literal-regexp.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/javascript/dos/rule-non-literal-regexp.yml
+rules/gitlab/javascript/eval/rule-eval-with-expression.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/javascript/eval/rule-eval-with-expression.yml
+rules/gitlab/javascript/pathtraversal/rule-non-literal-fs-filename.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/javascript/pathtraversal/rule-non-literal-fs-filename.yml
+rules/gitlab/javascript/react/rule-dangerouslysetinnerhtml.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/javascript/react/rule-dangerouslysetinnerhtml.yml
+rules/gitlab/javascript/xss/rule-mustache-escape.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/javascript/xss/rule-mustache-escape.yml
+rules/gitlab/python/assert/rule-assert-used.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/assert/rule-assert-used.yml
+rules/gitlab/python/bind_all_interfaces/rule-general-bindall-interfaces.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/bind_all_interfaces/rule-general-bindall-interfaces.yml
+rules/gitlab/python/crypto/rule-cipher-modes.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-cipher-modes.yml
+rules/gitlab/python/crypto/rule-crypto-cipher-blowfish.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-cipher-blowfish.yml
+rules/gitlab/python/crypto/rule-crypto-cipher-des.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-cipher-des.yml
+rules/gitlab/python/crypto/rule-crypto-cipher-rc2.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-cipher-rc2.yml
+rules/gitlab/python/crypto/rule-crypto-cipher-rc4.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-cipher-rc4.yml
+rules/gitlab/python/crypto/rule-crypto-cipher-xor.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-cipher-xor.yml
+rules/gitlab/python/crypto/rule-crypto-encrypt-dsa-rsa.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-encrypt-dsa-rsa.yml
+rules/gitlab/python/crypto/rule-crypto-encrypt-ec.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-encrypt-ec.yml
+rules/gitlab/python/crypto/rule-crypto-hash-md5.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-hash-md5.yml
+rules/gitlab/python/crypto/rule-crypto-hash-sha1.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-hash-sha1.yml
+rules/gitlab/python/crypto/rule-crypto-hazmat-cipher-arc4.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-hazmat-cipher-arc4.yml
+rules/gitlab/python/crypto/rule-crypto-hazmat-cipher-blowfish.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-hazmat-cipher-blowfish.yml
+rules/gitlab/python/crypto/rule-crypto-hazmat-cipher-idea.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-hazmat-cipher-idea.yml
+rules/gitlab/python/crypto/rule-crypto-hazmat-hash-md5.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-hazmat-hash-md5.yml
+rules/gitlab/python/crypto/rule-crypto-hazmat-hash-sha1.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-crypto-hazmat-hash-sha1.yml
+rules/gitlab/python/crypto/rule-hash-md2.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-hash-md2.yml
+rules/gitlab/python/crypto/rule-hash-md4.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-hash-md4.yml
+rules/gitlab/python/crypto/rule-hash-md5.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-hash-md5.yml
+rules/gitlab/python/crypto/rule-hash-sha1.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-hash-sha1.yml
+rules/gitlab/python/crypto/rule-hashlib-new-insecure-functions.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-hashlib-new-insecure-functions.yml
+rules/gitlab/python/crypto/rule-import-pycrypto.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/crypto/rule-import-pycrypto.yml
+rules/gitlab/python/deserialization/rule-cpickle.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/deserialization/rule-cpickle.yml
+rules/gitlab/python/deserialization/rule-dill.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/deserialization/rule-dill.yml
+rules/gitlab/python/deserialization/rule-marshal.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/deserialization/rule-marshal.yml
+rules/gitlab/python/deserialization/rule-pickle.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/deserialization/rule-pickle.yml
+rules/gitlab/python/deserialization/rule-shelve.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/deserialization/rule-shelve.yml
+rules/gitlab/python/deserialization/rule-yaml-load.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/deserialization/rule-yaml-load.yml
+rules/gitlab/python/django/rule-django-extra-used.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/django/rule-django-extra-used.yml
+rules/gitlab/python/escaping/rule-jinja2-autoescape-false.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/escaping/rule-jinja2-autoescape-false.yml
+rules/gitlab/python/escaping/rule-use-of-mako-templates.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/escaping/rule-use-of-mako-templates.yml
+rules/gitlab/python/eval/rule-eval.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/eval/rule-eval.yml
+rules/gitlab/python/exec/rule-exec-used.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/exec/rule-exec-used.yml
+rules/gitlab/python/exec/rule-linux-command-wildcard-injection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/exec/rule-linux-command-wildcard-injection.yml
+rules/gitlab/python/exec/rule-os-popen2.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/exec/rule-os-popen2.yml
+rules/gitlab/python/exec/rule-start-process-with-no-shell.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/exec/rule-start-process-with-no-shell.yml
+rules/gitlab/python/exec/rule-subprocess-call.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/exec/rule-subprocess-call.yml
+rules/gitlab/python/exec/rule-subprocess-popen-shell-true.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/exec/rule-subprocess-popen-shell-true.yml
+rules/gitlab/python/exec/rule-subprocess-shell-TRUE.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/exec/rule-subprocess-shell-TRUE.yml
+rules/gitlab/python/file_permissions/rule-general-bad-permission.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/file_permissions/rule-general-bad-permission.yml
+rules/gitlab/python/files/rule-tarfile-unsafe-members.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/files/rule-tarfile-unsafe-members.yml
+rules/gitlab/python/flask/rule-app-debug.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/flask/rule-app-debug.yml
+rules/gitlab/python/ftp/rule-ftplib.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/ftp/rule-ftplib.yml
+rules/gitlab/python/log/rule-logging-config-insecure-listen.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/log/rule-logging-config-insecure-listen.yml
+rules/gitlab/python/random/rule-random.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/random/rule-random.yml
+rules/gitlab/python/requests/rule-request-without-timeout.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/requests/rule-request-without-timeout.yml
+rules/gitlab/python/snmp/rule-insecure-snmp-version.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/snmp/rule-insecure-snmp-version.yml
+rules/gitlab/python/snmp/rule-snmp-weak-cryptography.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/snmp/rule-snmp-weak-cryptography.yml
+rules/gitlab/python/sql/rule-hardcoded-sql-expression.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/sql/rule-hardcoded-sql-expression.yml
+rules/gitlab/python/ssh/rule-ssh-nohost-key-verification.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/ssh/rule-ssh-nohost-key-verification.yml
+rules/gitlab/python/ssl/rule-req-no-certvalid.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/ssl/rule-req-no-certvalid.yml
+rules/gitlab/python/ssl/rule-ssl-no-version.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/ssl/rule-ssl-no-version.yml
+rules/gitlab/python/ssl/rule-ssl-with-bad-version.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/ssl/rule-ssl-with-bad-version.yml
+rules/gitlab/python/ssl/rule-unverified-context.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/ssl/rule-unverified-context.yml
+rules/gitlab/python/telnet/rule-import-telnib.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/telnet/rule-import-telnib.yml
+rules/gitlab/python/tmpdir/rule-hardcodedtmp.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/tmpdir/rule-hardcodedtmp.yml
+rules/gitlab/python/tmpdir/rule-mktemp-q.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/tmpdir/rule-mktemp-q.yml
+rules/gitlab/python/urlopen/rule-urllib-urlopen.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/urlopen/rule-urllib-urlopen.yml
+rules/gitlab/python/xml/rule-celement.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/xml/rule-celement.yml
+rules/gitlab/python/xml/rule-element.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/xml/rule-element.yml
+rules/gitlab/python/xml/rule-etree.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/xml/rule-etree.yml
+rules/gitlab/python/xml/rule-minidom.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/xml/rule-minidom.yml
+rules/gitlab/python/xml/rule-pulldom.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/python/xml/rule-pulldom.yml
+rules/gitlab/scala/cookie/rule-CookieHTTPOnly.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/cookie/rule-CookieHTTPOnly.yml
+rules/gitlab/scala/cookie/rule-CookieInsecure.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/cookie/rule-CookieInsecure.yml
+rules/gitlab/scala/cookie/rule-CookiePersistent.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/cookie/rule-CookiePersistent.yml
+rules/gitlab/scala/cookie/rule-CookieUsage.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/cookie/rule-CookieUsage.yml
+rules/gitlab/scala/cookie/rule-HttpResponseSplitting.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/cookie/rule-HttpResponseSplitting.yml
+rules/gitlab/scala/cookie/rule-TrustBoundaryViolation.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/cookie/rule-TrustBoundaryViolation.yml
+rules/gitlab/scala/cors/rule-PermissiveCORS.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/cors/rule-PermissiveCORS.yml
+rules/gitlab/scala/crypto/rule-BlowfishKeySize.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/crypto/rule-BlowfishKeySize.yml
+rules/gitlab/scala/crypto/rule-CustomMessageDigest.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/crypto/rule-CustomMessageDigest.yml
+rules/gitlab/scala/crypto/rule-DefaultHTTPClient.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/crypto/rule-DefaultHTTPClient.yml
+rules/gitlab/scala/crypto/rule-HazelcastSymmetricEncryption.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/crypto/rule-HazelcastSymmetricEncryption.yml
+rules/gitlab/scala/crypto/rule-InsufficientKeySizeRsa.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/crypto/rule-InsufficientKeySizeRsa.yml
+rules/gitlab/scala/crypto/rule-NullCipher.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/crypto/rule-NullCipher.yml
+rules/gitlab/scala/crypto/rule-RsaNoPadding.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/crypto/rule-RsaNoPadding.yml
+rules/gitlab/scala/crypto/rule-WeakMessageDigest.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/crypto/rule-WeakMessageDigest.yml
+rules/gitlab/scala/crypto/rule-WeakTLSProtocol.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/crypto/rule-WeakTLSProtocol.yml
+rules/gitlab/scala/endpoint/rule-UnencryptedSocket.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/endpoint/rule-UnencryptedSocket.yml
+rules/gitlab/scala/endpoint/rule-UnvalidatedRedirect.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/endpoint/rule-UnvalidatedRedirect.yml
+rules/gitlab/scala/endpoint/rule-WeakHostNameVerification.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/endpoint/rule-WeakHostNameVerification.yml
+rules/gitlab/scala/file/rule-FileUploadFileName.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/file/rule-FileUploadFileName.yml
+rules/gitlab/scala/file/rule-FilenameUtils.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/file/rule-FilenameUtils.yml
+rules/gitlab/scala/form/rule-FormValidate.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/form/rule-FormValidate.yml
+rules/gitlab/scala/inject/rule-AWSQueryInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/inject/rule-AWSQueryInjection.yml
+rules/gitlab/scala/inject/rule-BeanPropertyInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/inject/rule-BeanPropertyInjection.yml
+rules/gitlab/scala/inject/rule-CLRFInjectionLogs.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/inject/rule-CLRFInjectionLogs.yml
+rules/gitlab/scala/inject/rule-CommandInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/inject/rule-CommandInjection.yml
+rules/gitlab/scala/inject/rule-CustomInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/inject/rule-CustomInjection.yml
+rules/gitlab/scala/inject/rule-ELInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/inject/rule-ELInjection.yml
+rules/gitlab/scala/inject/rule-FileDisclosure.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/inject/rule-FileDisclosure.yml
+rules/gitlab/scala/inject/rule-HttpParameterPollution.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/inject/rule-HttpParameterPollution.yml
+rules/gitlab/scala/inject/rule-LDAPInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/inject/rule-LDAPInjection.yml
+rules/gitlab/scala/inject/rule-OgnlInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/inject/rule-OgnlInjection.yml
+rules/gitlab/scala/inject/rule-SqlInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/inject/rule-SqlInjection.yml
+rules/gitlab/scala/ldap/rule-AnonymousLDAP.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/ldap/rule-AnonymousLDAP.yml
+rules/gitlab/scala/ldap/rule-EntryPoisoning.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/ldap/rule-EntryPoisoning.yml
+rules/gitlab/scala/perm/rule-DangerousPermissions.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/perm/rule-DangerousPermissions.yml
+rules/gitlab/scala/perm/rule-OverlyPermissiveFilePermissionInline.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/perm/rule-OverlyPermissiveFilePermissionInline.yml
+rules/gitlab/scala/perm/rule-OverlyPermissiveFilePermissionObj.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/perm/rule-OverlyPermissiveFilePermissionObj.yml
+rules/gitlab/scala/script/rule-ScriptInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/script/rule-ScriptInjection.yml
+rules/gitlab/scala/script/rule-SpelView.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/script/rule-SpelView.yml
+rules/gitlab/scala/smtp/rule-InsecureSmtp.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/smtp/rule-InsecureSmtp.yml
+rules/gitlab/scala/smtp/rule-SmtpClient.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/smtp/rule-SmtpClient.yml
+rules/gitlab/scala/ssrf/rule-PlaySSRF.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/ssrf/rule-PlaySSRF.yml
+rules/gitlab/scala/ssrf/rule-SSRF.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/ssrf/rule-SSRF.yml
+rules/gitlab/scala/strings/rule-BadHexConversion.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/strings/rule-BadHexConversion.yml
+rules/gitlab/scala/strings/rule-FormatStringManipulation.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/strings/rule-FormatStringManipulation.yml
+rules/gitlab/scala/strings/rule-ImproperUnicode.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/strings/rule-ImproperUnicode.yml
+rules/gitlab/scala/strings/rule-ModifyAfterValidation.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/strings/rule-ModifyAfterValidation.yml
+rules/gitlab/scala/strings/rule-NormalizeAfterValidation.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/strings/rule-NormalizeAfterValidation.yml
+rules/gitlab/scala/templateinjection/rule-TemplateInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/templateinjection/rule-TemplateInjection.yml
+rules/gitlab/scala/unsafe/rule-ExternalConfigControl.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/unsafe/rule-ExternalConfigControl.yml
+rules/gitlab/scala/unsafe/rule-InformationExposure.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/unsafe/rule-InformationExposure.yml
+rules/gitlab/scala/unsafe/rule-SensitiveDataExposure.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/unsafe/rule-SensitiveDataExposure.yml
+rules/gitlab/scala/xml/rule-ApacheXmlRpc.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xml/rule-ApacheXmlRpc.yml
+rules/gitlab/scala/xml/rule-SAMLIgnoreComments.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xml/rule-SAMLIgnoreComments.yml
+rules/gitlab/scala/xpathi/rule-XpathInjection.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xpathi/rule-XpathInjection.yml
+rules/gitlab/scala/xss/rule-MVCApi.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xss/rule-MVCApi.yml
+rules/gitlab/scala/xss/rule-RequestWrapper.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xss/rule-RequestWrapper.yml
+rules/gitlab/scala/xss/rule-WicketXSS.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xss/rule-WicketXSS.yml
+rules/gitlab/scala/xss/rule-XSSReqParamToServletWriter.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xss/rule-XSSReqParamToServletWriter.yml
+rules/gitlab/scala/xxe/rule-Document.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xxe/rule-Document.yml
+rules/gitlab/scala/xxe/rule-SaxParserXXE.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xxe/rule-SaxParserXXE.yml
+rules/gitlab/scala/xxe/rule-Trans.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xxe/rule-Trans.yml
+rules/gitlab/scala/xxe/rule-XMLRdr.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xxe/rule-XMLRdr.yml
+rules/gitlab/scala/xxe/rule-XMLStreamRdr.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xxe/rule-XMLStreamRdr.yml
+rules/gitlab/scala/xxe/rule-XPathXXE.yml
+  licence: MIT (MIT (c) GitLab Inc.)
+  source:  https://gitlab.com/gitlab-org/security-products/sast-rules/-/blob/53bf5cf6df3c51b6c02110f5a638b5e6213666cd/scala/xxe/rule-XPathXXE.yml
+
+Imported test fixtures with a licence other than MIT
+----------------------------------------------------
+rules/gitlab/csharp/crypto/rule-WeakCipherAlgorithm.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/crypto/rule-WeakHashingFunction.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/crypto/rule-WeakRNG.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/csrf/rule-Csrf.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/deserialization/rule-InsecureDeserialization.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/endpoint/rule-UnvalidatedRedirect.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/injection/rule-CommandInjection.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/injection/rule-LdapInjection.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/injection/rule-SQLInjection.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/injection/rule-XPathInjection.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/injection/rule-XmlDocumentXXEInjection.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/injection/rule-XmlReaderXXEInjection.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/other/rule-UnsafeXSLTSettingUsed.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/password/rule-PasswordComplexity.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/path/rule-PathTraversal.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/validation/rule-InputValidation.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/xss/rule-HtmlElementXss.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/csharp/xss/rule-ScriptXss.cs: LGPL-3.0 License (c) security-code-scan
+rules/gitlab/go/blocklist/rule-blocklist-des.go: Apache 2.0 (c) gosec
+rules/gitlab/go/blocklist/rule-blocklist-md5.go: Apache 2.0 (c) gosec
+rules/gitlab/go/blocklist/rule-blocklist-rc4.go: Apache 2.0 (c) gosec
+rules/gitlab/go/blocklist/rule-blocklist-sha1.go: Apache 2.0
+rules/gitlab/go/crypto/rule-badtlssettings.go: Apache 2.0 (c) gosec
+rules/gitlab/go/crypto/rule-insecure-ignore-host-key.go: Apache 2.0 (c) gosec
+rules/gitlab/go/crypto/rule-weakkeystrength.go: Apache 2.0 (c) gosec
+rules/gitlab/go/crypto/rule-weakrandsource.go: Apache 2.0 (c) gosec
+rules/gitlab/go/file_permissions/rule-fileperm.go: Apache 2.0 (c) gosec
+rules/gitlab/go/file_permissions/rule-mkdir.go: Apache 2.0 (c) gosec
+rules/gitlab/go/filesystem/rule-decompression-bomb.go: Apache 2.0 (c) gosec
+rules/gitlab/go/filesystem/rule-fileread.go: Apache 2.0 (c) gosec
+rules/gitlab/go/filesystem/rule-poorwritepermissions.go: Apache 2.0 (c) gosec
+rules/gitlab/go/filesystem/rule-tempfiles.go: Apache 2.0 (c) gosec
+rules/gitlab/go/filesystem/rule-ziparchive.go: Apache 2.0 (c) gosec
+rules/gitlab/go/http/rule-http-serve.go: Apache 2.0 (c) gosec
+rules/gitlab/go/injection/rule-template-injection.go: Apache 2.0 (c) gosec
+rules/gitlab/go/leak/rule-pprof-endpoint.go: Apache 2.0 (c) gosec
+rules/gitlab/go/memory/rule-integer-overflow.go: Apache 2.0 (c) gosec
+rules/gitlab/go/memory/rule-memoryaliasing.go: Apache 2.0 (c) gosec
+rules/gitlab/go/network/rule-bind-to-all-interfaces.go: Apache 2.0 (c) gosec
+rules/gitlab/go/sql/rule-concat-sqli.go: Apache 2.0 (c) gosec
+rules/gitlab/go/subproc/rule-subproc.go: Apache 2.0 (c) gosec
+rules/gitlab/go/unsafe/rule-unsafe.go: Apache 2.0 (c) gosec
+rules/gitlab/java/cookie/rule-CookieInsecure.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/cookie/rule-HttpResponseSplitting.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/crypto/rule-BlowfishKeySize.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/crypto/rule-CustomMessageDigest.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/crypto/rule-HazelcastSymmetricEncryption.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/crypto/rule-InsufficientKeySizeRsa.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/crypto/rule-NullCipher.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/crypto/rule-RsaNoPadding.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/crypto/rule-WeakMessageDigest.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/crypto/rule-WeakTLSProtocolDefaultHttpClient.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/crypto/rule-WeakTLSProtocolSSLContext.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/endpoint/rule-HostnameVerifier.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/endpoint/rule-X509TrustManager.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/file/rule-FileUploadFileName.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/file/rule-FilenameUtils.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/inject/rule-CommandInjection.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/inject/rule-FileDisclosureRequestDispatcher.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/inject/rule-FileDisclosureSpringFramework.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/inject/rule-HttpParameterPollution.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/inject/rule-LDAPInjection.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/inject/rule-OgnlInjection.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/inject/rule-SpotbugsPathTraversalAbsolute.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/ldap/rule-AnonymousLDAP.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/password/rule-HardcodePassword.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/perm/rule-DangerousPermissions.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/perm/rule-OverlyPermissiveFilePermissionInline.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/script/rule-ScriptInjection.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/script/rule-SpringSpelExpressionParser.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/smtp/rule-InsecureSmtp.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/smtp/rule-SmtpClient.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/ssrf/rule-SSRF.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/strings/rule-BadHexConversion.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/strings/rule-FormatStringManipulation.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/strings/rule-ModifyAfterValidation.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/strings/rule-NormalizeAfterValidation.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/templateinjection/rule-TemplateInjection.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/unsafe/rule-ExternalConfigControl.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/xml/rule-SAMLIgnoreComments.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/xml/rule-XsltTransform.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/xss/rule-WicketXSS.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/xss/rule-XSSReqParamToServletWriter.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/java/xxe/rule-XMLRdr.java: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/python/bind_all_interfaces/rule-general-bindall-interfaces.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-cipher-modes.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-cipher-blowfish.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-cipher-des.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-cipher-rc2.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-cipher-rc4.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-cipher-xor.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-encrypt-dsa-rsa.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-encrypt-ec.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-hash-md5.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-hash-sha1.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-hazmat-cipher-arc4.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-hazmat-cipher-blowfish.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-hazmat-cipher-idea.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-hazmat-hash-md5.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-crypto-hazmat-hash-sha1.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-hash-md2.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-hash-md4.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-hash-md5.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-hash-sha1.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-hashlib-new-insecure-functions.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/crypto/rule-import-pycrypto.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/deserialization/rule-cpickle.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/deserialization/rule-marshal.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/deserialization/rule-pickle.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/deserialization/rule-yaml-load.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/django/rule-django-extra-used.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/escaping/rule-jinja2-autoescape-false.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/escaping/rule-use-of-mako-templates.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/exec/rule-linux-command-wildcard-injection.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/exec/rule-start-process-with-no-shell.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/exec/rule-subprocess-call.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/exec/rule-subprocess-popen-shell-true.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/exec/rule-subprocess-shell-TRUE.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/flask/rule-app-debug.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/ftp/rule-ftplib.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/random/rule-random.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/sql/rule-hardcoded-sql-expression.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/ssh/rule-ssh-nohost-key-verification.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/ssl/rule-req-no-certvalid.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/ssl/rule-ssl-no-version.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/ssl/rule-ssl-with-bad-version.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/ssl/rule-unverified-context.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/telnet/rule-import-telnib.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/tmpdir/rule-hardcodedtmp.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/tmpdir/rule-mktemp-q.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/urlopen/rule-urllib-urlopen.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/xml/rule-celement.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/xml/rule-element.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/xml/rule-etree.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/xml/rule-minidom.py: Apache 2.0 (c) PyCQA
+rules/gitlab/python/xml/rule-pulldom.py: Apache 2.0 (c) PyCQA
+rules/gitlab/scala/cookie/rule-CookieHTTPOnly.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/cookie/rule-CookieInsecure.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/cookie/rule-CookiePersistent.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/cookie/rule-CookieUsage.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/cookie/rule-HttpResponseSplitting.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/cookie/rule-TrustBoundaryViolation.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/cors/rule-PermissiveCORS.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/crypto/rule-BlowfishKeySize.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/crypto/rule-CustomMessageDigest.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/crypto/rule-DefaultHTTPClient.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/crypto/rule-HazelcastSymmetricEncryption.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/crypto/rule-InsufficientKeySizeRsa.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/crypto/rule-NullCipher.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/crypto/rule-RsaNoPadding.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/crypto/rule-WeakMessageDigest.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/crypto/rule-WeakTLSProtocol.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/endpoint/rule-UnencryptedSocket.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/endpoint/rule-UnvalidatedRedirect.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/endpoint/rule-WeakHostNameVerification.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/file/rule-FileUploadFileName.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/file/rule-FilenameUtils.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/form/rule-FormValidate.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/inject/rule-AWSQueryInjection.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/inject/rule-BeanPropertyInjection.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/inject/rule-CLRFInjectionLogs.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/inject/rule-CommandInjection.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/inject/rule-CustomInjection.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/inject/rule-ELInjection.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/inject/rule-FileDisclosure.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/inject/rule-HttpParameterPollution.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/inject/rule-LDAPInjection.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/inject/rule-OgnlInjection.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/inject/rule-SqlInjection.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/ldap/rule-AnonymousLDAP.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/perm/rule-DangerousPermissions.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/perm/rule-OverlyPermissiveFilePermissionInline.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/perm/rule-OverlyPermissiveFilePermissionObj.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/script/rule-ScriptInjection.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/script/rule-SpelView.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/smtp/rule-InsecureSmtp.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/smtp/rule-SmtpClient.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/ssrf/rule-PlaySSRF.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/ssrf/rule-SSRF.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/strings/rule-BadHexConversion.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/strings/rule-FormatStringManipulation.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/strings/rule-ImproperUnicode.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/strings/rule-ModifyAfterValidation.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/strings/rule-NormalizeAfterValidation.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/templateinjection/rule-TemplateInjection.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/unsafe/rule-ExternalConfigControl.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/unsafe/rule-InformationExposure.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/unsafe/rule-SensitiveDataExposure.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xml/rule-ApacheXmlRpc.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xml/rule-SAMLIgnoreComments.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xpathi/rule-XpathInjection.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xss/rule-MVCApi.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xss/rule-RequestWrapper.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xss/rule-WicketXSS.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xss/rule-XSSReqParamToServletWriter.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xxe/rule-Document.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xxe/rule-SaxParserXXE.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xxe/rule-Trans.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xxe/rule-XMLRdr.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xxe/rule-XMLStreamRdr.scala: LGPL-3.0 License (c) find-sec-bugs
+rules/gitlab/scala/xxe/rule-XPathXXE.scala: LGPL-3.0 License (c) find-sec-bugs

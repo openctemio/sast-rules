@@ -1,0 +1,25 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.javascript.express.sendfile-non-literal-path
+  languages: [javascript, typescript]
+  severity: WARNING
+  message: >-
+    res.sendFile is given a path built from a variable. If the variable comes
+    from the request, ../ sequences reach files outside the folder. Pass the
+    file name with the root option ({ root: dir }) and validate it against a
+    list of allowed names.
+  metadata:
+    category: security
+    cwe: ["CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"]
+    owasp: ["A01:2021 - Broken Access Control"]
+    confidence: LOW
+    likelihood: MEDIUM
+    impact: HIGH
+  patterns:
+  - pattern-either:
+    - pattern: $RES.sendFile($P, ...)
+    - pattern: $RES.download($P, ...)
+  - pattern-not: $RES.sendFile("...", ...)
+  - pattern-not: $RES.download("...", ...)
+  - pattern-not: '$RES.sendFile($P, {..., root: $ROOT, ...}, ...)'

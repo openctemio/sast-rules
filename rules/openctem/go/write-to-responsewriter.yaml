@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.go.web.unescaped-write-to-response
+  languages: [go]
+  severity: WARNING
+  message: >-
+    Data is written straight to the HTTP response, bypassing html/template's
+    escaping. If it contains user input and the response is HTML, it can run
+    script in the browser (XSS). Render with html/template, or set a non-HTML
+    Content-Type and escape the data.
+  metadata:
+    category: security
+    cwe: ["CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"]
+    owasp: ["A03:2021 - Injection"]
+    confidence: LOW
+    likelihood: MEDIUM
+    impact: MEDIUM
+  patterns:
+  - pattern-either:
+    - pattern-inside: |
+        func $H(..., $W http.ResponseWriter, ...) { ... }
+    - pattern-inside: |
+        func(..., $W http.ResponseWriter, ...) { ... }
+  - pattern-either:
+    - pattern: $W.Write($B)
+    - pattern: fmt.Fprint($W, ...)
+    - pattern: fmt.Fprintf($W, ...)
+    - pattern: fmt.Fprintln($W, ...)
+    - pattern: io.WriteString($W, $S)
+  - pattern-not: $W.Write([]byte("..."))
+  - pattern-not: fmt.Fprint($W, "...")
+  - pattern-not: io.WriteString($W, "...")

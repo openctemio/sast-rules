@@ -1,0 +1,8 @@
+# Benchmark repositories: name, URL, commit. Public, deliberately vulnerable
+# or widely used projects in the pack's main languages.
+DVWA https://github.com/digininja/DVWA 068d974487a297c155c48722f9fcf7180a83adc4
+pygoat https://github.com/adeyosemanputra/pygoat 19d17cc8874861142b330636d068bbde54e86b85
+go-test-bench https://github.com/Contrast-Security-OSS/go-test-bench 92445700823205281369911a72b7127f18c8c9ed
+gin https://github.com/gin-gonic/gin 0f09c3a9b4626d9fe9979cf4d0521d6ae32ab646
+WebGoat https://github.com/WebGoat/WebGoat e7b131360d74336c0c94ab5c8a21259503f59be8
+juice-shop https://github.com/juice-shop/juice-shop e39a3bdb8c61295c31fa4e0a03485e68a8ca12a4

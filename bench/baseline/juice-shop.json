@@ -1,0 +1,398 @@
+[
+ {
+  "path": ".github/workflows/ci.yml",
+  "start": 198,
+  "end": 198,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/ci.yml",
+  "start": 374,
+  "end": 374,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/codeql-analysis.yml",
+  "start": 23,
+  "end": 23,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/codeql-analysis.yml",
+  "start": 34,
+  "end": 34,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/codeql-analysis.yml",
+  "start": 36,
+  "end": 36,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/image_actions.yml",
+  "start": 30,
+  "end": 30,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/image_actions.yml",
+  "start": 33,
+  "end": 33,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/image_actions.yml",
+  "start": 42,
+  "end": 42,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/update-challenges-ebook.yml",
+  "start": 22,
+  "end": 25,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/update-challenges-www-legacy.yml",
+  "start": 27,
+  "end": 34,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/update-challenges-www-legacy.yml",
+  "start": 36,
+  "end": 44,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/update-challenges-www.yml",
+  "start": 27,
+  "end": 34,
+  "language": "yaml"
+ },
+ {
+  "path": ".github/workflows/update-challenges-www.yml",
+  "start": 36,
+  "end": 44,
+  "language": "yaml"
+ },
+ {
+  "path": ".npmrc",
+  "start": 1,
+  "end": 1,
+  "language": "other"
+ },
+ {
+  "path": "data/static/codefixes/dbSchemaChallenge_1.ts",
+  "start": 5,
+  "end": 5,
+  "language": "javascript"
+ },
+ {
+  "path": "data/static/codefixes/dbSchemaChallenge_3.ts",
+  "start": 11,
+  "end": 11,
+  "language": "javascript"
+ },
+ {
+  "path": "data/static/codefixes/iacLeakedKeyChallenge_1.tf",
+  "start": 17,
+  "end": 29,
+  "language": "terraform"
+ },
+ {
+  "path": "data/static/codefixes/iacLeakedKeyChallenge_1.tf",
+  "start": 121,
+  "end": 132,
+  "language": "terraform"
+ },
+ {
+  "path": "data/static/codefixes/iacLeakedKeyChallenge_1.tf",
+  "start": 159,
+  "end": 159,
+  "language": "terraform"
+ },
+ {
+  "path": "data/static/codefixes/iacLeakedKeyChallenge_2.tf",
+  "start": 17,
+  "end": 29,
+  "language": "terraform"
+ },
+ {
+  "path": "data/static/codefixes/iacLeakedKeyChallenge_2.tf",
+  "start": 121,
+  "end": 132,
+  "language": "terraform"
+ },
+ {
+  "path": "data/static/codefixes/iacLeakedKeyChallenge_2.tf",
+  "start": 159,
+  "end": 159,
+  "language": "terraform"
+ },
+ {
+  "path": "data/static/codefixes/iacLeakedKeyChallenge_3_correct.tf",
+  "start": 17,
+  "end": 29,
+  "language": "terraform"
+ },
+ {
+  "path": "data/static/codefixes/iacLeakedKeyChallenge_3_correct.tf",
+  "start": 121,
+  "end": 132,
+  "language": "terraform"
+ },
+ {
+  "path": "data/static/codefixes/iacLeakedKeyChallenge_3_correct.tf",
+  "start": 159,
+  "end": 159,
+  "language": "terraform"
+ },
+ {
+  "path": "data/static/codefixes/restfulXssChallenge_2.ts",
+  "start": 48,
+  "end": 48,
+  "language": "javascript"
+ },
+ {
+  "path": "data/static/codefixes/unionSqlInjectionChallenge_1.ts",
+  "start": 6,
+  "end": 6,
+  "language": "javascript"
+ },
+ {
+  "path": "data/static/codefixes/unionSqlInjectionChallenge_3.ts",
+  "start": 10,
+  "end": 10,
+  "language": "javascript"
+ },
+ {
+  "path": "data/static/users.yml",
+  "start": 151,
+  "end": 151,
+  "language": "yaml"
+ },
+ {
+  "path": "frontend/.npmrc",
+  "start": 1,
+  "end": 1,
+  "language": "other"
+ },
+ {
+  "path": "frontend/src/app/app.guard.spec.ts",
+  "start": 46,
+  "end": 46,
+  "language": "javascript"
+ },
+ {
+  "path": "frontend/src/app/last-login-ip/last-login-ip.component.spec.ts",
+  "start": 72,
+  "end": 72,
+  "language": "javascript"
+ },
+ {
+  "path": "frontend/src/app/last-login-ip/last-login-ip.component.spec.ts",
+  "start": 78,
+  "end": 78,
+  "language": "javascript"
+ },
+ {
+  "path": "frontend/src/hacking-instructor/helpers/helpers.ts",
+  "start": 49,
+  "end": 49,
+  "language": "javascript"
+ },
+ {
+  "path": "infrastructure/terraform/main.tf",
+  "start": 126,
+  "end": 134,
+  "language": "terraform"
+ },
+ {
+  "path": "infrastructure/terraform/networking.tf",
+  "start": 18,
+  "end": 30,
+  "language": "terraform"
+ },
+ {
+  "path": "infrastructure/terraform/networking.tf",
+  "start": 122,
+  "end": 133,
+  "language": "terraform"
+ },
+ {
+  "path": "infrastructure/terraform/networking.tf",
+  "start": 160,
+  "end": 160,
+  "language": "terraform"
+ },
+ {
+  "path": "lib/antiCheat.ts",
+  "start": 198,
+  "end": 198,
+  "language": "javascript"
+ },
+ {
+  "path": "lib/codingChallenges.ts",
+  "start": 77,
+  "end": 77,
+  "language": "javascript"
+ },
+ {
+  "path": "lib/codingChallenges.ts",
+  "start": 79,
+  "end": 79,
+  "language": "javascript"
+ },
+ {
+  "path": "lib/insecurity.ts",
+  "start": 42,
+  "end": 42,
+  "language": "javascript"
+ },
+ {
+  "path": "lib/insecurity.ts",
+  "start": 54,
+  "end": 54,
+  "language": "javascript"
+ },
+ {
+  "path": "lib/insecurity.ts",
+  "start": 150,
+  "end": 150,
+  "language": "javascript"
+ },
+ {
+  "path": "routes/captcha.ts",
+  "start": 22,
+  "end": 22,
+  "language": "javascript"
+ },
+ {
+  "path": "routes/currentUser.ts",
+  "start": 31,
+  "end": 31,
+  "language": "javascript"
+ },
+ {
+  "path": "routes/fileServer.ts",
+  "start": 32,
+  "end": 32,
+  "language": "javascript"
+ },
+ {
+  "path": "routes/keyServer.ts",
+  "start": 14,
+  "end": 14,
+  "language": "javascript"
+ },
+ {
+  "path": "routes/logfileServer.ts",
+  "start": 14,
+  "end": 14,
+  "language": "javascript"
+ },
+ {
+  "path": "routes/login.ts",
+  "start": 34,
+  "end": 34,
+  "language": "javascript"
+ },
+ {
+  "path": "routes/quarantineServer.ts",
+  "start": 14,
+  "end": 14,
+  "language": "javascript"
+ },
+ {
+  "path": "routes/redirect.ts",
+  "start": 18,
+  "end": 18,
+  "language": "javascript"
+ },
+ {
+  "path": "routes/search.ts",
+  "start": 23,
+  "end": 23,
+  "language": "javascript"
+ },
+ {
+  "path": "routes/userProfile.ts",
+  "start": 65,
+  "end": 65,
+  "language": "javascript"
+ },
+ {
+  "path": "routes/videoHandler.ts",
+  "start": 71,
+  "end": 71,
+  "language": "javascript"
+ },
+ {
+  "path": "server.ts",
+  "start": 158,
+  "end": 158,
+  "language": "javascript"
+ },
+ {
+  "path": "server.ts",
+  "start": 269,
+  "end": 269,
+  "language": "javascript"
+ },
+ {
+  "path": "server.ts",
+  "start": 290,
+  "end": 290,
+  "language": "javascript"
+ },
+ {
+  "path": "server.ts",
+  "start": 294,
+  "end": 294,
+  "language": "javascript"
+ },
+ {
+  "path": "server.ts",
+  "start": 298,
+  "end": 298,
+  "language": "javascript"
+ },
+ {
+  "path": "server.ts",
+  "start": 302,
+  "end": 302,
+  "language": "javascript"
+ },
+ {
+  "path": "terraform/main.tf",
+  "start": 126,
+  "end": 134,
+  "language": "terraform"
+ },
+ {
+  "path": "terraform/networking.tf",
+  "start": 18,
+  "end": 30,
+  "language": "terraform"
+ },
+ {
+  "path": "terraform/networking.tf",
+  "start": 122,
+  "end": 133,
+  "language": "terraform"
+ },
+ {
+  "path": "terraform/networking.tf",
+  "start": 160,
+  "end": 160,
+  "language": "terraform"
+ },
+ {
+  "path": "views/promotionVideo.pug",
+  "start": 75,
+  "end": 75,
+  "language": "other"
+ }
+]

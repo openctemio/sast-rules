@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.generic.secrets.jwt-in-source
+  languages: [regex]
+  severity: WARNING
+  message: >-
+    A JSON Web Token is written in the source. If it was ever valid, anyone
+    with the code can replay it until it expires or its key is rotated. Remove
+    it; tests should mint tokens with a test key.
+  metadata:
+    category: security
+    cwe: ["CWE-798: Use of Hard-coded Credentials"]
+    owasp: ["A07:2021 - Identification and Authentication Failures"]
+    confidence: MEDIUM
+    likelihood: LOW
+    impact: MEDIUM
+  pattern-regex: \beyJ[A-Za-z0-9_-]{8,}\.eyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}

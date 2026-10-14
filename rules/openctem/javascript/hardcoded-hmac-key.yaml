@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.javascript.crypto.hardcoded-key
+  languages: [javascript, typescript]
+  severity: ERROR
+  message: >-
+    An HMAC, cipher or JWT key is written in the code. Anyone who can read the
+    code can forge signatures or decrypt data. Load keys from a secret store or
+    the environment.
+  metadata:
+    category: security
+    cwe: ["CWE-798: Use of Hard-coded Credentials"]
+    owasp: ["A07:2021 - Identification and Authentication Failures"]
+    confidence: HIGH
+    likelihood: MEDIUM
+    impact: HIGH
+  pattern-either:
+  - pattern: $C.createHmac($ALG, "...")
+  - pattern: $C.createCipheriv($ALG, "...", ...)
+  - pattern: $JWT.sign($P, "...", ...)
+  - pattern: $JWT.verify($T, "...", ...)

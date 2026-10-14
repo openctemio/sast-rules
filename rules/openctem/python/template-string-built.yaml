@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.python.injection.template-from-request
+  languages: [python]
+  severity: ERROR
+  message: >-
+    A template is built from request data and then rendered. Template syntax in
+    the data runs on the server (server-side template injection). Render a
+    fixed template and pass the data as context.
+  metadata:
+    category: security
+    cwe: ["CWE-1336: Improper Neutralization of Special Elements Used in a Template Engine"]
+    owasp: ["A03:2021 - Injection"]
+    confidence: MEDIUM
+    likelihood: MEDIUM
+    impact: HIGH
+  mode: taint
+  pattern-sources:
+  - pattern-either:
+    - pattern: request.POST
+    - pattern: request.GET
+    - pattern: request.args
+    - pattern: request.form
+  pattern-sinks:
+  - patterns:
+    - pattern-either:
+      - pattern: $S + $X + "...{% endblock %}..."
+      - pattern: Template($X, ...)
+      - pattern: render_template_string($X, ...)
+      - pattern: Environment(...).from_string($X)
+    - focus-metavariable: $X

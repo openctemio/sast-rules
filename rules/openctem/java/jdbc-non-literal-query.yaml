@@ -1,0 +1,36 @@
+# SPDX-License-Identifier: MIT
+# Source: https://github.com/openctemio/sast-rules
+rules:
+- id: openctem.java.sqli.jdbc-non-literal-query
+  languages: [java]
+  severity: ERROR
+  message: >-
+    A JDBC Statement runs SQL that is not a constant. If any part of it comes
+    from a user, it can change the statement (SQL injection). Use a
+    PreparedStatement with ? parameters.
+  metadata:
+    category: security
+    cwe: ["CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"]
+    owasp: ["A03:2021 - Injection"]
+    confidence: MEDIUM
+    likelihood: HIGH
+    impact: HIGH
+  pattern-either:
+  - patterns:
+    - pattern-either:
+      - pattern: (java.sql.Statement $S).executeQuery($Q)
+      - pattern: (java.sql.Statement $S).execute($Q)
+      - pattern: (java.sql.Statement $S).executeUpdate($Q)
+      - pattern: (java.sql.Statement $S).addBatch($Q)
+      - pattern: (Statement $S).executeQuery($Q)
+      - pattern: (Statement $S).execute($Q)
+      - pattern: (Statement $S).executeUpdate($Q)
+    - pattern-not: $S.$F("...")
+  - patterns:
+    - pattern-either:
+      - pattern: $CONN.prepareStatement("$SQL" + $X + ...)
+      - pattern: $CONN.prepareStatement("$SQL" + $X + ..., ...)
+      - pattern: |
+          $Q = "$SQL" + $X + ...;
+          ...
+          $CONN.prepareStatement($Q, ...);
