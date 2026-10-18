@@ -3,9 +3,9 @@
 # checks its SHA-256 and verifies its keyless signature with cosign against
 # the opengrep release workflow of exactly that version.
 set -euo pipefail
-OPENGREP_VERSION=1.30.2
-SHA256_X86=a66aa3278457f02b287b985a45b6762aebcaba5000f2689245fd1ed86d1456c7
-SHA256_AARCH64=90acea5df4b733083f388d4feeb250ca802f671b33d1f222653d1e571dd2b0d8
+OPENGREP_VERSION=1.31.0
+SHA256_X86=dbbe3c2058dbe600c449a8ba22ea79a1643a6660658400090d0323a8d0d31147
+SHA256_AARCH64=2b713a29a00237f85408b83002fc111db5b94c7fa8d263f0a93184a960655d9d
 dest="${1:-$HOME/.local/bin}"
 case "$(uname -m)" in
   x86_64) arch=x86; sum="$SHA256_X86" ;;
