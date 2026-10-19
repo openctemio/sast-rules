@@ -1,6 +1,6 @@
 # Verified false positives in the history (commit:file:rule:line): documentation
 # placeholders and test fixtures, none a real credential (history audit 2026-10-18).
 # Add a line only after confirming the match is not a real credential.
-920f8c4d009ef31034762adb5271327a5a9876f7:rules/gitlab/csharp/injection/rule-LdapInjection.cs:generic-password:16
-920f8c4d009ef31034762adb5271327a5a9876f7:rules/openctem/generic/jwt-in-source.txt:generic-api-key:4
-920f8c4d009ef31034762adb5271327a5a9876f7:rules/openctem/generic/jwt-in-source.txt:jwt:2
+95e220196e3d8bc9ee625993f30d9cfbe890bdeb:rules/gitlab/csharp/injection/rule-LdapInjection.cs:generic-password:16
+95e220196e3d8bc9ee625993f30d9cfbe890bdeb:rules/openctem/generic/jwt-in-source.txt:generic-api-key:4
+95e220196e3d8bc9ee625993f30d9cfbe890bdeb:rules/openctem/generic/jwt-in-source.txt:jwt:2
